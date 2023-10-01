@@ -64,6 +64,7 @@ https://github.com/vtpaiva/Introducao-Web-2023.2/assets/101905045/e7e831d6-fcc7-
 * Quantidade vendida.
 #### Hotéis
 * Cidade.
+* Foto.
 * Descrição.
 * Disponibilidade em dado momento de check-in.
 * Preço.

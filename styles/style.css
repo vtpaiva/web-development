@@ -169,3 +169,50 @@ footer .formBox {
     font-size: 12px;
     color: white;
 }
+.formBox > #buyForm > fieldset > div {
+    border: 3px dotted #262a3d;
+}
+#cards {
+    margin-top: -25px;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    background-color: #262a3d;
+    border: none;
+}
+#cards > img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin: auto;
+}
+#buySection > div{
+    border: 3px dashed #e3f25e;
+    width: 400px;
+}
+#buySection > div > fieldset{
+    border-image: linear-gradient(to bottom, #4d5780 0%, #4d5780 50%, #222638 100%) 1;
+}
+#buySection > div > fieldset > legend{
+    margin: auto;
+    font-size: 40px;
+}
+#buySection > div > fieldset > div{
+    color: black;
+    font-weight: bold;
+    margin: 15px;
+    padding: 5px;
+    display: flex;
+    background-color: #e3f25e;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+#buySection > div > button {
+    background-color: rgb(227,242,94);
+    font-weight: bold;
+    height: 50px;
+    width: 100px;
+    margin-top: 0px;
+    border: 3px solid #bdc94f;
+    border-radius: 25px;
+}

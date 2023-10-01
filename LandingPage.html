@@ -1,160 +1,269 @@
+<!-- Descricao do servico/produtos + login -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-
+    <title>Home</title>
     <style>
-        body {
-            font-family: DejaVu Sans Mono, monospace;
-            background-color: rgb(255, 246, 242);
-        }
-
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            background-color: rgb(0,228,255);
-            background: linear-gradient(180deg, rgba(0,228,255,1) 0%, rgba(21,164,218,1) 91%, rgba(255,255,255,1) 100%);
-            box-shadow: 60px -16px teal;
-            border-radius: 0 0 15px 15px;
-        }
-
-        .links {
-            display: flex;
-            width: 100%;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-
-        .links a {
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 225%;
-            border: solid white;
-            border-width: 0 0 5px 0;
-            padding: 5px;
-            border-radius: 5px;
-        }
-
-        #logo {
-            height: 145px;
-            -webkit-filter: drop-shadow(10px 5px 5px white);
-            filter: drop-shadow(10px 5px 5px white);
-        }
-
-        #menu {
-            background-color: transparent;
-            border: none;
-        }
-
-        #menu img {
-            height: 80px;
-        }
-
-        .flight {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            height: 200px;
-            background-color: rgb(39, 126, 255);
-            border-radius: 15px;
-            border: 5px solid rgb(66, 101, 255);
-            margin-top: 150px;
-        }
-
-        .sale {
-            display: flex;
-            margin: 20px;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-        }
-
-        .sale img {
-            margin: 5px;
-            height: 300px;
-            width: 300px;
-            border-radius: 20px;
-        }
-
-        .sale img:hover {
-            filter: brightness(50%);
-        }
-
-        footer {
-            border-top: 5px solid rgb(219, 210, 206);
-            border-radius: 5px;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .footicons {
-            gap: 15px;
-        }
-        
-        /* Imagens dos ícones de rodapé*/
-        .footicons img {
-            border-radius: 50px;
-            height: 100px;
-            width: 100px;
-        }
-
-        /* Links do rodapé*/
-        .footlinks {
-            list-style-type: "🔎";
-        }    
-     </style>
-
-    <script>
-
-    </script>
-
+* {
+    font-family: "helvetica";
+}
+body {
+    background: rgb(23,26,38);
+    background: linear-gradient(180deg, rgba(23,26,38,1) 0%, rgba(23,26,38,1) 80%, rgba(37,42,60,1) 100%);
+    margin-top: 150px;
+}
+nav {
+    position: fixed;
+    background: rgb(227,242,94);
+    background: linear-gradient(180deg, rgba(227,242,94,1) 0%, rgba(189,201,79,1) 0%, rgba(189,201,79,1) 0%, rgba(227,242,94,1) 29%);
+    display: grid;
+    border-width: 0 0 5px; border-style: solid;
+    border-color: #bdc94f;
+    grid-template-columns: repeat(3, 1fr);
+    top: 0; left: 0;
+    width: 99%;
+    box-shadow: 2px 2px #11131c;
+    border-radius: 0 0 15px 15px;
+    grid-template-rows: 100px;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+nav > * {
+    text-align: center;
+}
+main > h1 {
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+#imgDiv {
+    display: block;
+    text-align: left;
+    margin-left: 10px;
+}
+#imgDiv > img {
+    height: 150px;
+    width: auto;
+    scale: 70%;
+    filter: drop-shadow(10px 5px 5px rgb(236, 247, 143));
+}
+#rightDiv > img {
+    height: 50px;
+}
+#bodyLeft {
+    grid-template-rows: repeat(2, 1fr);
+    margin-left: auto;
+}
+nav > h1 {
+    margin: auto;
+    font-size: 2.5em;
+    border: 4px solid #171a26;
+    border-radius: 10px;
+    width: 50%;
+}
+nav > div > a {
+    color: #171a26;
+    font-weight: bold;
+    font-family: "courier new";
+    font-size: 1.3em;
+}
+nav > div {
+    display: block;
+    text-align: right;
+    margin-right: 10px;
+}
+@media (max-width: 800px) {
+    nav > div > a, #imgDiv{
+        visibility: hidden;
+    }
+}
+.box {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px dashed #4d5780;
+    box-shadow: 10px 15px #11131c;
+    color: white;
+    background-color: #222638;
+    margin: 20px auto 20px auto;
+}
+#sectionDescription {
+    max-width: 20%;
+}
+#mainSection {
+    grid-template-rows: repeat(3, 1fr);
+    border: none;
+    margin-top: 15px;
+    width: 100%;
+    min-width: 30%;
+    height: auto;
+}
+#mainSection > form > fieldset {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    border-color: #4d5780;
+    border-style: solid;
+}
+#mainSection > form > fieldset > legend {
+    margin: auto;
+    font-size: 40px;
+}
+#mainSection > form > fieldset > div {
+    font-size: 30px;
+    width: 0.5;
+    padding: 10px;
+    margin: 10px;
+    background-color: #39405c;
+    border-radius: 10px;
+}
+#sub {
+    background-color: rgb(227,242,94);
+    height: 50px;
+    border: 3px solid #bdc94f;
+    border-radius: 25px;
+}
+#sale {
+    display: flex;
+    margin: 15px;
+    overflow-x: auto;
+}
+#sale > img{
+    height: 300px;
+    width: 500px;
+    margin: 18px;
+    border-radius: 10px;
+}
+#sale > img:hover {
+    filter: brightness(0.7);
+}
+#fields > div > input, select {
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+#mainSection > #footForm > fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    border-color: #4d5780;
+    border-style: solid;
+}
+footer {
+    display: flex;
+    margin-top: 15px;
+    border-width: 5px 0 0 0; border-color: #262935;
+    border-style: solid; border-radius: 5px;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+footer > div {
+    text-align: center;
+    margin: auto;
+}
+@media (max-width: 800px) {
+    main {
+        display: block;
+    }
+    #sectionDescription {
+        margin-top: 50px;
+        max-width: 70%;
+    }
+}
+.footicons {
+    gap: 15px;
+}
+.footicons img {
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
+}
+.footlinks {
+    list-style-type: "🔎";
+}    
+    </style>
 </head>
 <body>
+    <nav>
+        <div id="imgDiv">
+            <img src="images/logo.png">
+        </div>
+        <h1>MilesAway</h1>
+        <div id = "rightDiv">
+            <img src="images/menu.png" alt="">
+            <img src="images/login.png" alt="">
+        </div>
+    </nav>
 
-    <div class = "header">
-        <img id = "logo" src="zyro-image.png" alt="Logo">
-            <div class = "links">
-                <a href = "#">Viagens</a>
-                <a href = "#">Hotéis</a>
-                <a href = "#">Transporte</a>
-                <button id = "menu"><img src="menu.png" alt=""></button>
-            </div>
-    </div>
+    <main>
+        <section id="mainSection" class="box">
+            <form id="flightForm">
+                <fieldset id = "fields">
+                    <legend>Passagens aéreas</legend>
+                    <div>
+                        <label for="origin">Origem:</label>
+                        <select name="orign">
+                            <option value="Congonhas">Congonhas</option>
+                            <option value="Galeão">Galeão</option>
+                            <option value="Guarulhos">Guarulhos</option>
+                            <option value="Viracopos">Viracopos</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="destiny">Destino:</label>
+                        <select name="destiny">
+                            <option value="Congonhas">Congonhas</option>
+                            <option value="Galeão">Galeão</option>
+                            <option value="Guarulhos">Guarulhos</option>
+                            <option value="Viracopos">Viracopos</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="datetogo">Data de partida:</label>
+                        <input type="date" name="datetogo"date>
+                    </div>
+                    <div>
+                        <label for="datetoback">Data de volta:</label>
+                        <input type="date" name="datetoback"date>
+                    </div>
+                    <div>
+                        <label for="pass">Número de passageiros:</label>
+                        <input type="number" name="pass"date>
+                    </div>
+                    <div>
+                        <label for="bag">Número de bagagens:</label>
+                        <input type="number" name="bag"date>
+                    </div>
+                </fieldset>
+                <button type="submit" form="flightForm" id = "sub">Procurar por voos</button>
+            </form>
+        </section>
 
-    <div class = "flight">
-        <input type="text" placeholder="Origem">
-        <input type="text" placeholder="Destino">
-        <input type="date">
-        <input type="date">
-        <input type="number">
-        <input type="submit">
-    </div>
+        <h1 id="travel">Pacotes de viagem</h1>
+        <section id = "sale">
+            <img src="images/ar.jpg" title="Argentina">
+            <img src="images/bh.jpg" alt="">
+            <img src="images/pr.jpg" alt="">
+            <img src="images/rj.jpg" alt="">
+            <img src="images/sc.jpg" alt="">
+            <img src="images/sp.jpg" alt="">
+            <img src="images/rs.jpg" alt="">
+        </section>
+    </main>
 
-    <div class="sale">
-        <img src="https://via.placeholder.com/300x300" alt="destiny">
-        <img src="https://via.placeholder.com/300x300" alt="destiny">
-        <img src="https://via.placeholder.com/300x300" alt="destiny">
-        <img src="https://via.placeholder.com/300x300" alt="destiny">
-        <img src="https://via.placeholder.com/300x300" alt="destiny">
-        <img src="https://via.placeholder.com/300x300" alt="destiny">
-        <img src="https://via.placeholder.com/300x300" alt="destiny">
-        <img src="https://via.placeholder.com/300x300" alt="destiny">
-        <img src="https://via.placeholder.com/300x300" alt="destiny">
-        <img src="https://via.placeholder.com/300x300" alt="destiny">
-    </div>
-    
     <footer>
-		<div class = "footer">
+        <div>
             <span>
-                <h2>About</h2>
-                <p>This website is entirely about MilesAway.</p>
+                <h2>Sobre</h2>
+                <p>Companhia aérea fundada em 2023.</p>
             </span>
 
 			<section class = "footicons">
@@ -166,6 +275,21 @@
 				</figure>
 			</section>
 		</div>
+
+        <div>
+            <section id="mainSection" class="box">
+                <form id="footForm">
+                    <fieldset>
+                        <legend>Receber ofertas por e-mail</legend>
+                        <div>
+                            <label for="email">E-mail:</label>
+                            <input type="email" placeholder="Entre seu e-mail" name="email">
+                        </div>
+                    </fieldset>
+                    <button type="submit" form="loginForm">Enviar</button>
+                </form>
+            </section>
+        </div>
     </footer>
+
 </body>
-</html>

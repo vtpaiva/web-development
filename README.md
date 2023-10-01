@@ -30,6 +30,8 @@ Trabalho de Introdução ao Desenvolvimento Web - SCC0219 (2023.2)
 * Compra de passagens aéreas.
 * Compra de hospedagens em hotéis.
 * Acompanhamento de reservas.
+#### Diferencial
+* A partir das cidades de destino dos voos a serem comprados, o sistema deve oferecer acomodamentos em hóteis de mesma localidade. Dessa forma, o cliente terá grande facilidade em integrar as duas compras, não necessitando de ir a outros concorrentes e aumentando nossa competitividade no mercado.
 
 ### Navegação
 * Os protótipos de tela no [figma](https://www.figma.com/file/pUHEav14fR9GSXJ9Gk1iWq/Web-Milestone1?type=design&node-id=0%3A1&mode=design&t=Lli3eqv7sJLlKVP3-1), bem como a navegação mostrada no vídeo abaixo, ilustram a interação entre as telas de modo a cumprir os requisitos propostos no tópico acima.

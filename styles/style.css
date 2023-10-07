@@ -21,6 +21,7 @@ nav {
 
     background-color: #e3f25e;
 
+    z-index: 2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100px;

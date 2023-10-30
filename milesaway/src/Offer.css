@@ -1,0 +1,56 @@
+.offerPanel {
+    position: relative;
+    display: block;
+    background-color: transparent;
+}
+
+.offerPanel > img {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.offerPanel > img:hover {
+    filter: brightness(0.7);
+}
+
+.offerBottom {
+    position: absolute;
+    display: flex;
+    bottom: 74px;
+    border-radius: 10px;
+    width: 500px;
+    height: 80px;
+    background-color: #e3f25e;
+    border: 5px solid #9ea844;
+    border-width: 0px 0px 5px;
+    margin-bottom: -70px;
+}
+
+.offerBottom > span {
+    position: absolute;
+    top: 28px;
+    left: 20px;
+    color: black;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.offerBottom > button {
+    position: absolute;
+    left: 300px;
+    top: 20px;
+    width: 180px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    background-color: #2b345c;
+    border-radius: 30px;
+    border: 2px solid white;
+}
+
+.offerBottom > button:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
+}

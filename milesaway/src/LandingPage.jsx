@@ -6,7 +6,6 @@ import {Box, SubBox} from './Box.jsx'
 
 function LandingPage() {
     return (
-        <>      
             <>      
             <Header/>
             <Box name = 'Passagens aéreas' display = 'block'>
@@ -62,7 +61,6 @@ function LandingPage() {
                 <Offer image = 'pr.jpg' price = '8'/>
             </div>
             <Footer/>
-        </>
         </>
     )
 }

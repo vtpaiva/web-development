@@ -1,0 +1,26 @@
+#userPic {
+    text-align: center;
+}
+
+#userPic > img {
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    border-radius: 150px;
+    border: 5px solid #e3f25e;
+    filter: drop-shadow(4px 4px 5px #9ea844);
+}
+
+#options {
+    display: flex;
+    background-color: transparent;
+}
+
+#options > .defaultSubBox {
+    margin: 10px 20px;
+}
+
+#options > .defaultSubBox:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}

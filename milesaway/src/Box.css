@@ -32,6 +32,9 @@
     padding: 10px;
     background-color: #39405c;
     border-radius: 10px;
+    border: 2px solid #4d5780;
+    outline: 2px solid #4d5780;
+    outline-offset: 2px;
     margin: auto;
     width: fit-content;
     height: fit-content;

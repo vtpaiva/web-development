@@ -13,7 +13,7 @@ function Box(props) {
     return (
         <div className='defaultBox'>
             <fieldset style={{'display' : props.display ? props.display : 'flex'}}>
-                <legend>{props.name}</legend>
+                {props.name ? <legend>{props.name}</legend> : null}
                 {props.children}
             </fieldset>
         </div>

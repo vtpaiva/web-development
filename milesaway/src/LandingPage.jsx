@@ -36,7 +36,7 @@ function LandingPage() {
                         <input type="number" />
                     </SubBox>
                 </div>
-                <button class='defaultButton'>Inscrever-se</button>
+                <button class='defaultButton'>Procurar passagens</button>
             </Box>
             <h1 id='package'>Pacotes de Viagens</h1>
             <div id='sale'>

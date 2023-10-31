@@ -6,21 +6,13 @@ import {Box, SubBox} from './Box.jsx'
 import LandingPage from './LandingPage';
 import SingIn from './SingIn';
 import SingUp from './SingUp.jsx'
+import UserProfile from './UserProfile.jsx'
+import AdministratorProfile from './AdministratorProfile';
 
 function App() {
     return (
         <>      
-        {/*Pagina principal
-            <LandingPage/>        
-        */}
-
-        {/*Pagina de login
-            <SingIn/>        
-        */}
-
-        {/*Pagina de cadastro
-            <SingUp/>        
-        */}
+            <LandingPage/>
         </>
     )
 }

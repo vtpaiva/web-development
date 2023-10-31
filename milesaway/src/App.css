@@ -33,12 +33,3 @@ body {
   cursor: pointer;
   filter: brightness(1.2);
 }
-
-.defaultBox > fieldset > .innerBox {
-  display: flex;
-  background-color: transparent;
-}
-
-.defaultBox > fieldset > .innerBox > .defaultSubBox {
-  margin: 10px;
-}

@@ -28,3 +28,17 @@ body {
   border: 3px solid #bdc94f;
   border-radius: 25px;
 }
+
+.defaultButton:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
+}
+
+.defaultBox > fieldset > .innerBox {
+  display: flex;
+  background-color: transparent;
+}
+
+.defaultBox > fieldset > .innerBox > .defaultSubBox {
+  margin: 10px;
+}

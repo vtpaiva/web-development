@@ -1,6 +1,7 @@
 footer {
     display: flex;
-    background-color: #262935;
+    background: rgb(227,242,94);
+    background: linear-gradient(180deg, rgba(227,242,94,1) 0%, rgba(38,41,53,1) 0%, rgba(38,41,53,1) 0%, rgba(0,0,0,1) 100%); 
     color: white;
     justify-content: space-around;
     border-radius: 15px 15px 0px 0px;

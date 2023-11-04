@@ -62,3 +62,40 @@
     border: 3px solid #bdc94f;
     border-radius: 25px;
 }
+
+.ticketBox {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: fit-content;
+    border-radius: 15px;
+}
+
+.ticketBox > div, .ticketBox > div > span {
+    color: black;
+    font-weight: bold;
+    background-color: #e3f25e;
+}
+
+.travelOD {
+    display: flex;
+}
+
+.travelDate {
+    display: flex;
+}
+
+.price {
+    display: block;
+}
+
+.price > button {
+    color: white;
+    background-color: #39405c;
+    font-weight: bold;
+    height: 50px;
+    width: 100px;
+    margin-top: 0px;
+    border: 3px solid #6e7aaa;
+    border-radius: 25px;
+}

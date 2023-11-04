@@ -1,3 +1,4 @@
+import React from 'react';
 import './Offer.css'
 
 function Offer(props) {

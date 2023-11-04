@@ -1,14 +1,6 @@
 import React from 'react';
 import './Box.css'
 
-function SubBox(props) {
-    return (
-        <div className='defaultSubBox'>
-            {props.children}
-        </div>
-    )
-}
-
 function Box(props) {
     return (
         <div className='defaultBox'>
@@ -16,6 +8,14 @@ function Box(props) {
                 {props.name ? <legend>{props.name}</legend> : null}
                 {props.children}
             </fieldset>
+        </div>
+    )
+}
+
+function SubBox(props) {
+    return (
+        <div className='defaultSubBox'>
+            {props.children}
         </div>
     )
 }

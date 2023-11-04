@@ -14,7 +14,7 @@ function Footer() {
                 <section class="mediaIcons">
                     <figure>
                     <a href="#"><img src="logoFacebook.png" alt="Facebook"/></a>
-                    <a href="#"><img src="logoInstagram.jpg" alt="Instagram"/></a>
+                    <a href="#"><img src="logoInstagram.png" alt="Instagram"/></a>
                     <a href="#"><img src="logoTwitter.png" alt="Twitter"/></a>
                         <figcaption>Social Media</figcaption>
                     </figure>

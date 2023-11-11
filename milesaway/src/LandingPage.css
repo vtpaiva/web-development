@@ -1,8 +1,0 @@
-.defaultBox > fieldset > .innerBox {
-    display: flex;
-    background-color: transparent;
-  }
-  
-  .defaultBox > fieldset > .innerBox > .defaultSubBox {
-    margin: 10px;
-  }

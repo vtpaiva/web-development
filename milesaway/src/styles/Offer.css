@@ -1,0 +1,142 @@
+.offerPanel {
+    position: relative;
+    display: block;
+    background-color: transparent;
+    margin: 5px 10px 5px 10px;
+}
+
+.offerPanel > img {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.offerPanel > img:hover {
+    filter: brightness(0.7);
+}
+
+.offerBottom {
+    position: absolute;
+    display: flex;
+    bottom: 74px;
+    border-radius: 10px;
+    width: 500px;
+    height: 80px;
+    background-color: #e3f25e;
+    border: 5px solid #9ea844;
+    border-width: 0px 0px 5px;
+    margin-bottom: -70px;
+}
+
+.offerBottom > span {
+    position: absolute;
+    top: 28px;
+    left: 20px;
+    color: black;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.add {
+    position: absolute;
+    left: 300px;
+    top: 20px;
+    width: 180px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    background-color: #2b345c;
+    border-radius: 30px;
+    border: 2px solid white;
+}
+
+.remove {
+    position: absolute;
+    left: 300px;
+    top: 20px;
+    width: 180px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(180, 24, 24);
+    border-radius: 30px;
+    border: 2px solid white;
+}
+
+.flightContainer {
+    display: flex;
+    justify-content: space-between;
+    outline: 2px solid #9ea844;
+    outline-offset: 3px;
+    background-color: #e3f25e;
+    padding: 40px 20px 40px 20px;
+    border-radius: 15px;
+    align-items: center;
+    margin: 25px 80px 25px 80px;
+}
+
+.flightData {
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.flightData > span{
+    color: white;
+    background-color: #2b345c;
+    margin: 0 20px 0 20px;
+    border: 2px solid black;
+    outline: 2px solid white;
+    outline-offset: 1px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.flightData > .flightCompany{
+    color: white;
+    background-color: #2b345c;
+    margin: 0 20px 0 20px;
+    border: 2px solid black;
+    outline: 2px solid black;
+    outline-offset: 1px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.flightButton {
+    background-color: transparent;
+}
+
+.flightButton > a > button {
+    width: 180px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    background-color: #2b345c;
+    border-radius: 30px;
+    border: 2px solid white;
+}
+
+button:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
+}
+
+#flightOffers {
+    max-height: 1200px;
+    overflow-y: auto;
+}
+
+#flightSale {
+    display: flex;
+    overflow-x: auto;
+}
+
+#flightHead {
+    text-align: center;
+    color: white;
+}
+
+a {
+    background-color: transparent;
+}

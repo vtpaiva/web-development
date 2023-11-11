@@ -1,0 +1,17 @@
+#changeContainer {
+    background-color: transparent;
+}
+
+#changeContainer > .defaultSubBox {
+    margin: 20px;
+}
+
+#button {
+    background-color: rgb(227,242,94);
+    font-weight: bold;
+    height: 50px;
+    width: 100px;
+    margin: 20px auto auto auto;
+    border: 3px solid #bdc94f;
+    border-radius: 25px;
+}

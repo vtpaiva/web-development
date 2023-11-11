@@ -1,7 +1,7 @@
 import Footer from './Footer'
 import Header from './Header'
 import {Box, SubBox} from './Box'
-import './Profile.css'
+import './styles/Profile.css'
 import { Link } from 'react-router-dom'
 
 function UserProfile() {
@@ -13,8 +13,8 @@ function UserProfile() {
                 </div>
                 <Box>
                     <div id='options'>
-                        <SubBox>Alterar e-mail</SubBox>
-                        <SubBox>Alterar senha</SubBox>
+                        <Link to = '/email'><SubBox>Alterar e-mail</SubBox></Link>
+                        <Link to = '/password'><SubBox>Alterar senha</SubBox></Link>
                          <Link to = '/booking'> <SubBox>Minhas reservas</SubBox></Link>
                         <SubBox>Minhas avaliações</SubBox>
                     </div>

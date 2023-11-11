@@ -1,7 +1,7 @@
 import Footer from './Footer'
 import Header from './Header'
 import {Box, SubBox} from './Box'
-import './Profile.css'
+import './styles/Profile.css'
 
 function AdministratorProfile() {
     return (

@@ -1,7 +1,7 @@
 import Footer from './Footer.jsx'
 import Header from './Header.jsx'
-import Offer from './Offer.jsx'
-import './Cart.css'
+import { Link } from 'react-router-dom';
+import './styles/Cart.css'
 
 import React from 'react';
 
@@ -34,11 +34,11 @@ function Cart(props) {
                     <div id='cartRight'>
                         <div id='cartHotel'>
                             <span>Gostaria de encontrar hotéis para sua estadia?</span>
-                            <button>Encontrar hotéis</button>
+                            <Link to='/hotel'><button>Encontrar hotéis</button></Link>
                         </div>
                         <div id='cartFinish'>
                             <span>Total: R$ 4</span>
-                            <button>Finalizar pagamento</button>
+                            <Link to='/payment'><button>Finalizar pagamento</button></Link>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './Header.css'
+import './styles/Header.css'
 
 function Header() {
     return (
@@ -9,7 +9,7 @@ function Header() {
                 <h1 id='headTitle'>MilesAway</h1>
                 <div id='cornerLinks'>
                     <Link to='/profile'><img src="login.png" alt="Menu" className='cornerImg'/></Link>
-                    <a href="#"><img src="menu.png" alt="Profile" className='cornerImg'/></a>
+                    <Link to='/cart'><img src="cart.png" alt="Profile" className='cornerImg'/></Link>
                 </div>
             </div>
         </div>

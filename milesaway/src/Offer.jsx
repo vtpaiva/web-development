@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './Offer.css'
+import { Link } from 'react-router-dom';
+import './styles/Offer.css'
 
 function BotaoToggle() {
     const [classeBotao, setClasseBotao] = useState('add');
@@ -18,6 +19,25 @@ function BotaoToggle() {
     );
   }
 
+function FlightOffer(props) {
+    return (
+        <>
+            <div className='flightContainer'>
+                <div className='flightData'>
+                    <span>Origem: {props.origin}</span>
+                    <span>Destino: {props.destiny}</span>
+                    <span>Ida: {props.departure}</span>
+                    <span>Volta: {props.back}</span>
+                    <span className='flightCompany'>{props.company}</span>
+                </div>
+                <div className='flightButton'>
+                    <Link to = '/cart'><button>Adicionar ao carrinho</button></Link>
+                </div>
+            </div>
+        </>
+    )
+}
+
 function Offer(props) {
     return (
         <div className='offerPanel'>
@@ -30,4 +50,4 @@ function Offer(props) {
     )
 }
 
-export default Offer
+export {FlightOffer, Offer}

@@ -1,6 +1,7 @@
-import './LandingPage.css'
+import './styles/LandingPage.css'
+import { Link } from 'react-router-dom';
 import Header from './Header.jsx'
-import Offer from './Offer.jsx';
+import {Offer, FlightOffer} from './Offer.jsx';
 import Footer from './Footer.jsx'
 import {Box, SubBox} from './Box.jsx'
 
@@ -11,31 +12,31 @@ function LandingPage() {
             <Box name = 'Passagens aéreas' display = 'block'>
                 <div className='innerBox'>
                     <SubBox>
-                        <label htmlFor="origem">Origem</label>
-                        <input type="text" />
+                        <label htmlFor="origem">Origem:</label>
+                        <input type="text" placeholder='Origem'/>
                     </SubBox>
                     <SubBox>
                         <label htmlFor="destino">Destino:</label>
-                        <input type="text" />
+                        <input type="text" placeholder='Destino'/>
                     </SubBox>
                     <SubBox>
                         <label htmlFor="partida">Partida:</label>
-                        <input type="date" />
+                        <input type="date" placeholder='Partida'/>
                     </SubBox>
                     <SubBox>
                         <label htmlFor="volta">Volta:</label>
-                        <input type="date" />
+                        <input type="date" placeholder='Volta'/>
                     </SubBox>
                     <SubBox>
                         <label htmlFor="passageiros">Passageiros:</label>
-                        <input type="number" />
+                        <input type="number" placeholder='Passageiros'/>
                     </SubBox>
                     <SubBox>
                         <label htmlFor="bagagem">Bagagem:</label>
-                        <input type="number" />
+                        <input type="number" placeholder='Bagagem'/>
                     </SubBox>
                 </div>
-                <button class='defaultButton'>Procurar passagens</button>
+                <Link to = '/offers'><button class='defaultButton'>Procurar passagens</button></Link>
             </Box>
             <h1 id='package'>Pacotes de Viagens</h1>
             <div id='sale'>

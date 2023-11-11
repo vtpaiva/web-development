@@ -1,10 +1,10 @@
-import './LandingPage.css'
+import './styles/LandingPage.css'
 import Header from './Header.jsx'
 import Offer from './Offer.jsx';
 import Footer from './Footer.jsx'
 import {Box, SubBox} from './Box.jsx'
 
-import './Payment.css'
+import './styles/Payment.css'
 
 function Item(props) {
     return (

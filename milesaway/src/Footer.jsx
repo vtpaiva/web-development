@@ -1,6 +1,6 @@
 import {Box, SubBox} from './Box.jsx'
 
-import './Footer.css'
+import './styles/Footer.css'
 
 function Footer() {
     return (

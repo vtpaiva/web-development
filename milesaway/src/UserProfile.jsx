@@ -2,6 +2,7 @@ import Footer from './Footer'
 import Header from './Header'
 import {Box, SubBox} from './Box'
 import './Profile.css'
+import { Link } from 'react-router-dom'
 
 function UserProfile() {
     return (
@@ -14,7 +15,7 @@ function UserProfile() {
                     <div id='options'>
                         <SubBox>Alterar e-mail</SubBox>
                         <SubBox>Alterar senha</SubBox>
-                        <SubBox>Minhas reservas</SubBox>
+                         <Link to = '/booking'> <SubBox>Minhas reservas</SubBox></Link>
                         <SubBox>Minhas avaliações</SubBox>
                     </div>
                 </Box>

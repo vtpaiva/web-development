@@ -37,7 +37,7 @@
     background-color: transparent;
 }
 
-.offerBottom > button {
+.add {
     position: absolute;
     left: 300px;
     top: 20px;
@@ -46,6 +46,19 @@
     color: white;
     font-weight: bold;
     background-color: #2b345c;
+    border-radius: 30px;
+    border: 2px solid white;
+}
+
+.remove {
+    position: absolute;
+    left: 300px;
+    top: 20px;
+    width: 180px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(180, 24, 24);
     border-radius: 30px;
     border: 2px solid white;
 }

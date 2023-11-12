@@ -13,7 +13,6 @@
 
 #options {
     display: flex;
-    flex-direction: column;
     background-color: transparent;
 }
 

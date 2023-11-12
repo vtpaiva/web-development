@@ -14,7 +14,7 @@
   "flights": [
     {
       "id": 0,
-      "checked": true,
+      "checked": false,
       "from": "Sao Carlos",
       "to": "Rio de Janeiro",
       "depart": "2023-07-15",
@@ -47,7 +47,7 @@
     },
     {
       "id": 3,
-      "checked": true,
+      "checked": false,
       "from": "Sao Carlos",
       "to": "Teste 2",
       "depart": "2023-07-15",
@@ -60,7 +60,7 @@
   "stays": [
     {
       "id": 0,
-      "checked": true,
+      "checked": false,
       "city": "Rio de Janeiro",
       "checkIn": "2023-07-15",
       "checkOut": "2023-08-09",

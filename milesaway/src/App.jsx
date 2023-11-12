@@ -10,6 +10,7 @@ import Hoteis from './Hoteis'
 import Booking from './Booking'
 import {Cart, CartOffer} from './Cart.jsx'
 import {Payment, Item} from './Payment.jsx'
+import Finished from './Finished.jsx'
 import {Password, Email} from './Change.jsx'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/offers" element={<OffersDisplay/>}/>   
             <Route path="/cart" element={<Cart/>}/>   
             <Route path="/payment" element={<Payment/>}/>   
+            <Route path="/finished" element={<Finished/>}/>   
             <Route path="/cart" element={<Cart/>}/>   
             <Route path="/password" element={<Password/>}/>   
             <Route path="/email" element={<Email/>}/>   

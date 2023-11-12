@@ -27,7 +27,7 @@ const useFetch = (url, requestOptions) => {
                     setIsPending(false);
                     setError(err.message);
                 });
-        }, 1000);
+        }, Math.floor(Math.random() * 1000)+500);
     }, [url, requestOptions]);
 
     return { data, isPending, error };
@@ -58,7 +58,7 @@ const useFetchPut = (url, body) => {
                     setIsPending(false);
                     setError(err.message);
                 });
-        }, 1);
+        }, Math.floor(Math.random() * 1000));
     }, [url]);
 
     useEffect(() => {
@@ -89,7 +89,7 @@ const useFetchPut = (url, body) => {
                     setIsPending(false);
                     setError(err.message);
                 });
-        }, 1);
+        }, Math.floor(Math.random() * 100));
     }, [data, body]);
 
     return { data, isPending, error };

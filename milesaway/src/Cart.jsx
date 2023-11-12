@@ -2,11 +2,12 @@ import Footer from './Footer.jsx'
 import Header from './Header.jsx'
 import { Link } from 'react-router-dom';
 import './styles/Cart.css'
-import { Offer, FlightOffer } from './Offer.jsx';
+import { Offer, FlightOffer, BotaoToggle } from './Offer.jsx';
 import useFetch from './useFetch.jsx';
 import { useState, useEffect } from 'react';
 
 import React from 'react';
+import { SubBox } from './Box.jsx';
 
 function CartOffer(props) {
     return (
@@ -14,11 +15,12 @@ function CartOffer(props) {
             <img src={props.image} alt="" />
             <div className='offerDesc'>
                 <span>R$ {props.price}</span>
-                <div className='quantityButton'>
-                    <button>-</button>
-                    <div className='quantity'>{props.quantity}</div>
-                    <button>+</button>
-                </div>
+                <span>{props.from}</span>
+                <span>{props.to}</span>
+                <span>{props.depart}</span>
+                <span>{props.return}</span>
+                <span>{props.airline}</span>
+                <BotaoToggle checked={props.checked} endpoint={props.endpoint}/>
             </div>
         </div>
     )

@@ -2,6 +2,7 @@ import './styles/LandingPage.css';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Header from './Header.jsx';
+import {Cart, CartOffer} from './Cart.jsx'
 import {Offer, FlightOffer} from './Offer.jsx';
 import Footer from './Footer.jsx';
 import {Box, SubBox} from './Box.jsx';
@@ -104,7 +105,7 @@ function LandingPage() {
                 {error && <p>{error}</p>}
                 {isPending && <p>Loading...</p>}
                 {data && data.map(item => (
-                    <FlightOffer key={"LP"+item.id} endpoint={"flights/"+item.id} checked={item.checked} image={item.image} price={item.price} from={item.from} to={item.to} depart={item.depart} return={item.return} airline={item.airline}/>
+                    <CartOffer key={"LP"+item.id} endpoint={"flights/"+item.id} checked={item.checked} image={item.image} price={item.price} from={item.from} to={item.to} depart={item.depart} return={item.return} airline={item.airline}/>
                 ))}
             </div>
             <Footer/>

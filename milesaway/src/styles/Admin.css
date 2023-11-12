@@ -1,0 +1,29 @@
+.popupContainer {
+    text-align: center;
+    padding: 15px;
+}
+
+.popupContainer > span {
+    padding: 10px;
+    background-color: #9ea844;
+    border-radius: 5px;
+}
+
+.editOffers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.editHead {
+    color: white;
+    text-align: center;
+}
+
+.editOptions {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    color: white;
+}

@@ -12,7 +12,7 @@ import {Cart, CartOffer} from './Cart.jsx'
 import {Payment, Item} from './Payment.jsx'
 import Finished from './Finished.jsx'
 import {Password, Email} from './Change.jsx'
-import { Admin, Client, Offer } from './Admin.jsx'
+import { RegisterAdmins, RegisterClients, ManageOffers } from './Admin.jsx'
 
 function App() {
     return (
@@ -32,9 +32,9 @@ function App() {
             <Route path="/cart" element={<Cart/>}/>
             <Route path="/password" element={<Password/>}/>
             <Route path="/email" element={<Email/>}/>
-            <Route path='/registerAdmin' element={<Admin/>}/>
-            <Route path='/registerClient' element={<Client/>}/>
-            <Route path='/manageOffers' element={<Offer/>}/>
+            <Route path='/registerAdmin' element={<RegisterAdmins/>}/>
+            <Route path='/registerClient' element={<RegisterClients/>}/>
+            <Route path='/manageOffers' element={<ManageOffers/>}/>
             </Routes>
         </Router>
     )

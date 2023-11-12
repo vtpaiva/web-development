@@ -49,4 +49,4 @@ function Offer(props) {
     )
 }
 
-export {FlightOffer, Offer}
+export {FlightOffer, Offer, BotaoToggle}

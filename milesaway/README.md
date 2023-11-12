@@ -14,4 +14,4 @@ No terminal, ainda no diretório da pasta, execute o comando `npx json-server --
 
 ## Execute o projeto.
 
-Por fim, no terminal da pasta, execute o comando `npm start`
+Por fim, em um terminal distinto, ainda da pasta, execute o comando `npm start`

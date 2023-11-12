@@ -30,3 +30,7 @@
 #loginContainer {
     display: flex;
 }
+
+#changeContainer input {
+    color: black;
+}

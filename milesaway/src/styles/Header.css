@@ -5,24 +5,23 @@
     border-width: 0px 0px 5px;
     border-radius: 0px 0px 15px 15px;
     box-shadow: 0px 5px 3px #11131c;
-    display: grid;
     position: fixed;
     top: 0;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 100px;
+    left: 0;
+    right: 0;
     margin-bottom: 150px;
     padding: 10px;
-    justify-content: space-between;
-    text-align: center;
     z-index: 2;
 }
 
 #mainContainer {
-    width: 1313px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px;
+    justify-content: space-between;
     text-align: center;
     align-items: center;
     background-color: transparent;
-    display: flex;
     justify-content: space-between;
 }
 
@@ -36,8 +35,12 @@
     text-align: left;
     width: auto;
 }
-
-#mainContainer > #headTitle {
+#headTitle {
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+}
+#headTitle > h1 {
     background-color: transparent;
     border: 4px solid #171a26;
     border-radius: 10px;
@@ -49,7 +52,7 @@
 #cornerLinks {
     background-color: transparent;
     display: flex;
-    justify-content: space-around;
+    justify-content: right;
     text-align: right;
 }
 
@@ -66,11 +69,15 @@
 }
 
 @media (max-width: 800px) {
-    nav > #navLogo{
+    #logoLink {
         visibility: hidden;
     }
-    nav > #navTitle{
+    #headTitle{
         grid-column: 1 / 2;
         grid-row: 1;
+    }
+    #cornerLinks {
+        flex-direction: column;
+        align-items: flex-end;
     }
 }

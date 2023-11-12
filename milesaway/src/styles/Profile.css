@@ -13,6 +13,7 @@
 
 #options {
     display: flex;
+    flex-direction: column;
     background-color: transparent;
 }
 
@@ -25,4 +26,8 @@
 #options > .defaultSubBox:hover {
   filter: brightness(1.2);
   cursor: pointer;
+}
+
+#loginContainer {
+    display: flex;
 }

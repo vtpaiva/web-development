@@ -2,13 +2,13 @@
   "accounts": [
     {
       "id": 0,
-      "name": "John",
-      "type": "admin"
+      "name": "user",
+      "type": "user"
     },
     {
       "id": 1,
-      "name": "Bob",
-      "type": "user"
+      "name": "admin",
+      "type": "admin"
     }
   ],
   "flights": [

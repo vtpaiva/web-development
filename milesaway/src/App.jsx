@@ -12,25 +12,29 @@ import {Cart, CartOffer} from './Cart.jsx'
 import {Payment, Item} from './Payment.jsx'
 import Finished from './Finished.jsx'
 import {Password, Email} from './Change.jsx'
+import { Admin, Client, Offer } from './Admin.jsx'
 
 function App() {
     return (
         <Router>
             <Routes>
-            <Route path="/" element={<LandingPage/>}/>   
-            <Route path="/hotel" element={<Hoteis/>}/>   
-            <Route path="/profile" element={<UserProfile/>}/>   
-            <Route path="/admprofile" element={<AdministratorProfile/>}/>   
-            <Route path="/booking" element={<Booking/>}/>   
-            <Route path="/singin" element={<SingIn/>}/>   
-            <Route path="/singup" element={<SingUp/>}/>   
-            <Route path="/offers" element={<OffersDisplay/>}/>   
-            <Route path="/cart" element={<Cart/>}/>   
-            <Route path="/payment" element={<Payment/>}/>   
-            <Route path="/finished" element={<Finished/>}/>   
-            <Route path="/cart" element={<Cart/>}/>   
-            <Route path="/password" element={<Password/>}/>   
-            <Route path="/email" element={<Email/>}/>   
+            <Route path="/" element={<LandingPage/>}/>
+            <Route path="/hotel" element={<Hoteis/>}/>
+            <Route path="/profile" element={<UserProfile/>}/>
+            <Route path="/admprofile" element={<AdministratorProfile/>}/>
+            <Route path="/booking" element={<Booking/>}/>
+            <Route path="/singin" element={<SingIn/>}/>
+            <Route path="/singup" element={<SingUp/>}/>
+            <Route path="/offers" element={<OffersDisplay/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path="/payment" element={<Payment/>}/>
+            <Route path="/finished" element={<Finished/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path="/password" element={<Password/>}/>
+            <Route path="/email" element={<Email/>}/>
+            <Route path='/registerAdmin' element={<Admin/>}/>
+            <Route path='/registerClient' element={<Client/>}/>
+            <Route path='/manageOffers' element={<Offer/>}/>
             </Routes>
         </Router>
     )

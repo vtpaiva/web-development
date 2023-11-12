@@ -47,7 +47,8 @@ function LandingPage() {
                                 name="origem"
                                 value={formData.origem}
                                 onChange={handleChange} 
-                                placeholder='Origem'/>
+                                placeholder='Origem'
+                                required/>
                     </SubBox>
                     <SubBox>
                         <label htmlFor="destino">Destino:</label>
@@ -55,7 +56,8 @@ function LandingPage() {
                                 name="destino"
                                 value={formData.destino}
                                 onChange={handleChange} 
-                                placeholder='Destino'/>
+                                placeholder='Destino'
+                                required/>
                     </SubBox>
                     <SubBox>
                         <label htmlFor="partida">Partida:</label>
@@ -63,7 +65,8 @@ function LandingPage() {
                                 name="ida"
                                 value={formData.ida}
                                 onChange={handleChange} 
-                                placeholder='Ida'/>
+                                placeholder='Ida'
+                                required/>
                     </SubBox>
                     <SubBox>
                         <label htmlFor="volta">Volta:</label>
@@ -71,7 +74,8 @@ function LandingPage() {
                                 name="volta"
                                 value={formData.volta}
                                 onChange={handleChange} 
-                                placeholder='Volta'/>
+                                placeholder='Volta'
+                                required/>
                     </SubBox>
                     <SubBox>
                         <label htmlFor="passageiros">Passageiros:</label>
@@ -79,7 +83,8 @@ function LandingPage() {
                                 name="passageiros"
                                 value={formData.passageiros}
                                 onChange={handleChange} 
-                                placeholder='Passageiros'/>
+                                placeholder='Passageiros'
+                                required/>
                     </SubBox>
                     <SubBox>
                         <label htmlFor="bagagem">Bagagem:</label>
@@ -87,7 +92,8 @@ function LandingPage() {
                                 name="bagagem"
                                 value={formData.bagagem}
                                 onChange={handleChange} 
-                                placeholder='Bagagem'/>
+                                placeholder='Bagagem'
+                                required/>
                     </SubBox>
                 </div>
                 <button type="submit" className='defaultButton'>Procurar passagens</button>

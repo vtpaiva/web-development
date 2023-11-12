@@ -33,3 +33,7 @@ body {
   cursor: pointer;
   filter: brightness(1.2);
 }
+
+.whiteText {
+    color: white;
+}

@@ -6,38 +6,32 @@ import {Box, SubBox} from './Box.jsx';
 import useFetch from './useFetch.jsx';
 
 function Hoteis() {
+    const { data: dataF, isPending: isPendingF, error: errorF } = useFetch('http://localhost:4000/flights');
     const { data, isPending, error } = useFetch('http://localhost:4000/stays');
+    let filter = {};
+    let num = 0;
+    if(dataF)
+        for(let i = 0; i < dataF.length; ++i) {
+            if(dataF[i].checked) {
+                filter[dataF[i].to] = true;
+                ++num;
+            }
+        }
     return (
         <>
             <Header/>
-            <Box name = 'Hotéis' display = 'block'>
-                <div className='innerBox'>
-                    <SubBox>
-                        <label htmlFor="local">Localidade:<br></br></label>
-                        <input type="text" placeholder='Localidade'/>
-                    </SubBox>
-                    <SubBox>
-                        <label htmlFor="arrive">Chegada:<br></br></label>
-                        <input type="date" />
-                    </SubBox>
-                    <SubBox>
-                        <label htmlFor="departure">Partida:<br></br></label>
-                        <input type="date" />
-                    </SubBox>
-                    <SubBox>
-                        <label htmlFor="people">Pessoas:<br></br></label>
-                        <input type="number" placeholder='Pessoas'/>
-                    </SubBox>
-                </div>
-                <Link to='/offers'><button className='defaultButton'>Procurar hospedagem</button></Link>
-            </Box>
             <h1 id='package'>Pacotes de hospedagem</h1>
             <div id='sale'>
                 {error && <p>{error}</p>}
                 {isPending && <p>Loading...</p>}
-                {data && data.map(item => (
-                    <Offer key={"H"+item.id} endpoint={"stays/"+item.id} checked={item.checked} image={item.image} price={item.price}/>
-                ))}
+                {dataF && data && data.map(item => {
+                    if(filter[item.city])
+                        return (
+                        <Offer key={"H"+item.id} endpoint={"stays/"+item.id} checked={item.checked} image={item.image} price={item.price}/>
+                        )
+                    return null;
+                })}
+                {num === 0 && <p className="whiteText">Nao ha hoteis disponiveis para os destinos de suas viagens</p>}
             </div>
             <Footer/>
         </>

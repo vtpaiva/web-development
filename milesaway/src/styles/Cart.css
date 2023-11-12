@@ -87,6 +87,10 @@
     overflow-y: auto;
 }
 
+#cartLeft > h2 {
+    color: white;
+}
+
 #cartHotel {
     background-color: #e3f25e;
     outline: 2px solid #9ea844;

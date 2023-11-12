@@ -19,6 +19,8 @@
 .offerBottom {
     position: absolute;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     bottom: 74px;
     border-radius: 10px;
     width: 500px;
@@ -30,7 +32,6 @@
 }
 
 .offerBottom > span {
-    position: absolute;
     top: 28px;
     left: 20px;
     color: black;
@@ -39,7 +40,6 @@
 }
 
 .add {
-    position: absolute;
     left: 300px;
     top: 20px;
     width: 180px;
@@ -52,7 +52,6 @@
 }
 
 .remove {
-    position: absolute;
     left: 300px;
     top: 20px;
     width: 180px;
@@ -79,6 +78,8 @@
 .flightData {
     background-color: transparent;
     font-weight: bold;
+    display: grid;
+    grid-gap: 10px;
 }
 
 .flightData > span{

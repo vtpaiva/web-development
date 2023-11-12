@@ -1,11 +1,13 @@
-import './styles/LandingPage.css'
+import './styles/LandingPage.css';
 import { Link } from 'react-router-dom';
-import Header from './Header.jsx'
+import Header from './Header.jsx';
 import {Offer, FlightOffer} from './Offer.jsx';
-import Footer from './Footer.jsx'
-import {Box, SubBox} from './Box.jsx'
+import Footer from './Footer.jsx';
+import {Box, SubBox} from './Box.jsx';
+import useFetch from './useFetch.jsx';
 
 function LandingPage() {
+    const {data, isPending, error} = useFetch('http://localhost:4000/flights');
     return (
             <>      
             <Header/>
@@ -36,30 +38,15 @@ function LandingPage() {
                         <input type="number" placeholder='Bagagem'/>
                     </SubBox>
                 </div>
-                <Link to = '/offers'><button class='defaultButton'>Procurar passagens</button></Link>
+                <Link to = '/offers'><button className='defaultButton'>Procurar passagens</button></Link>
             </Box>
             <h1 id='package'>Pacotes de Viagens</h1>
             <div id='sale'>
-                <Offer image = 'rj.jpg' price = '4'/>
-                <Offer image = 'pr.jpg' price = '8'/>
-                <Offer image = 'rj.jpg' price = '4'/>
-                <Offer image = 'pr.jpg' price = '8'/>
-                <Offer image = 'rj.jpg' price = '4'/>
-                <Offer image = 'pr.jpg' price = '8'/>
-                <Offer image = 'rj.jpg' price = '4'/>
-                <Offer image = 'pr.jpg' price = '8'/>
-                <Offer image = 'rj.jpg' price = '4'/>
-                <Offer image = 'pr.jpg' price = '8'/>
-                <Offer image = 'rj.jpg' price = '4'/>
-                <Offer image = 'pr.jpg' price = '8'/>
-                <Offer image = 'rj.jpg' price = '4'/>
-                <Offer image = 'pr.jpg' price = '8'/>
-                <Offer image = 'rj.jpg' price = '4'/>
-                <Offer image = 'pr.jpg' price = '8'/>
-                <Offer image = 'rj.jpg' price = '4'/>
-                <Offer image = 'pr.jpg' price = '8'/>
-                <Offer image = 'rj.jpg' price = '4'/>
-                <Offer image = 'pr.jpg' price = '8'/>
+                {error && <p>{error}</p>}
+                {isPending && <p>Loading...</p>}
+                {data && data.map(item => (
+                    <FlightOffer key={"LP"+item.id} endpoint={"flights/"+item.id} checked={item.checked} image={item.image} price={item.price} from={item.from} to={item.to} depart={item.depart} return={item.return} airline={item.airline}/>
+                ))}
             </div>
             <Footer/>
         </>

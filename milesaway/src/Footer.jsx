@@ -11,7 +11,7 @@ function Footer() {
                     <p>Companhia aérea fundada em 2023.</p>
                 </span>
 
-                <section class="mediaIcons">
+                <section className="mediaIcons">
                     <figure>
                     <a href="#"><img src="logoFacebook.png" alt="Facebook"/></a>
                     <a href="#"><img src="logoInstagram.png" alt="Instagram"/></a>
@@ -25,7 +25,7 @@ function Footer() {
                         <label htmlFor="email">E-mail: </label>
                         <input type="email" name="email" placeholder='Seu melhor e-mail' />
                     </SubBox>
-                    <button class='defaultButton'>Inscrever-se</button>
+                    <button className='defaultButton'>Inscrever-se</button>
                 </Box>
         </footer>
     )

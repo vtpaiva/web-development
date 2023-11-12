@@ -20,7 +20,7 @@ function SingUp() {
                                 <input type='password' name="senha" id="senha" />
                             </SubBox>
                         </div>
-                        <button class='defaultButton'>Enviar</button>
+                        <button className='defaultButton'>Enviar</button>
                     </Box>
                     <Box name = 'Precisa de ajuda?' display = 'block'>
                         <div className='centerBox'>
@@ -30,7 +30,7 @@ function SingUp() {
                                 <input type='tel' name="telefone" id="telefone" />
                             </SubBox>
                         </div>
-                        <button class='defaultButton'>Enviar</button>
+                        <button className='defaultButton'>Enviar</button>
                     </Box>
                 </div>
                 <div id='singupRight'>

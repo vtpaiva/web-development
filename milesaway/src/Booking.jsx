@@ -11,7 +11,7 @@ function Booking() {
                         <label htmlFor="book">Código</label>
                         <input type="text" placeholder='Insira o código da reserva' />
                     </SubBox>
-                    <button class='defaultButton'>Procurar reserva</button>
+                    <button className='defaultButton'>Procurar reserva</button>
                 </Box>
             <Footer/>
         </>

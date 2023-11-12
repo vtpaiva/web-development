@@ -1,12 +1,14 @@
 import Header from './Header.jsx'
 import { Link } from 'react-router-dom';
 import {Offer, FlightOffer} from './Offer.jsx';
-import Footer from './Footer.jsx'
-import {Box, SubBox} from './Box.jsx'
+import Footer from './Footer.jsx';
+import {Box, SubBox} from './Box.jsx';
+import useFetch from './useFetch.jsx';
 
 function Hoteis() {
+    const { data, isPending, error } = useFetch('http://localhost:4000/stays');
     return (
-        <>      
+        <>
             <Header/>
             <Box name = 'Hotéis' display = 'block'>
                 <div className='innerBox'>
@@ -27,22 +29,15 @@ function Hoteis() {
                         <input type="number" placeholder='Pessoas'/>
                     </SubBox>
                 </div>
-                <Link to='/offers'><button class='defaultButton'>Procurar hospedagem</button></Link>
+                <Link to='/offers'><button className='defaultButton'>Procurar hospedagem</button></Link>
             </Box>
             <h1 id='package'>Pacotes de hospedagem</h1>
             <div id='sale'>
-            <Offer image = 'hotelrj.jpg' price = '4'/>
-                <Offer image = 'hotelsp.jpg' price = '8'/>
-                <Offer image = 'hotelrj.jpg' price = '4'/>
-                <Offer image = 'hotelsp.jpg' price = '8'/>
-                <Offer image = 'hotelrj.jpg' price = '4'/>
-                <Offer image = 'hotelsp.jpg' price = '8'/>
-                <Offer image = 'hotelrj.jpg' price = '4'/>
-                <Offer image = 'hotelsp.jpg' price = '8'/>
-                <Offer image = 'hotelrj.jpg' price = '4'/>
-                <Offer image = 'hotelsp.jpg' price = '8'/>
-                <Offer image = 'hotelrj.jpg' price = '4'/>
-                <Offer image = 'hotelsp.jpg' price = '8'/>
+                {error && <p>{error}</p>}
+                {isPending && <p>Loading...</p>}
+                {data && data.map(item => (
+                    <Offer key={"H"+item.id} endpoint={"stays/"+item.id} checked={item.checked} image={item.image} price={item.price}/>
+                ))}
             </div>
             <Footer/>
         </>

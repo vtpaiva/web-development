@@ -18,7 +18,7 @@ function SingIn() {
                         <input type='password' name="senha" id="senha" />
                     </SubBox>
                 </div>
-                <button class='defaultButton'>Enviar</button>
+                <button className='defaultButton'>Enviar</button>
             </Box>
 
             <Box name = 'Precisa de ajuda?' display = 'block'>
@@ -29,7 +29,7 @@ function SingIn() {
                         <input type='tel' name="telefone" id="telefone" />
                     </SubBox>
                 </div>
-                <button class='defaultButton'>Enviar</button>
+                <button className='defaultButton'>Enviar</button>
             </Box>
         <Footer/>
     </>

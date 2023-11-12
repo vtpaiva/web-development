@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './styles/Offer.css'
+import { useFetchPut } from './useFetch.jsx';
 
-function BotaoToggle() {
-    const [classeBotao, setClasseBotao] = useState('add');
-    const [textoBotao, setTextoBotao] = useState('Adicionar ao carrinho');
+function BotaoToggle(props) {
+    const [ checked, setChecked ] = useState(props.checked);
+    useFetchPut("http://localhost:4000/" + props.endpoint, {"checked": checked});
   
     const alternarBotao = () => {
-      setClasseBotao(classeBotao === 'add' ? 'remove' : 'add');
-  
-      setTextoBotao(textoBotao === 'Adicionar ao carrinho' ? 'Remover do carrinho' : 'Adicionar ao carrinho');
+        setChecked(!checked);
     };
   
     return (
-      <button className={classeBotao} onClick={alternarBotao}>
-        {textoBotao}
+      <button className={checked ? 'remove' : 'add'} onClick={alternarBotao}>
+        {checked ? 'Remover do carrinho' : 'Adicionar ao carrinho'}
       </button>
     );
   }
@@ -24,14 +23,14 @@ function FlightOffer(props) {
         <>
             <div className='flightContainer'>
                 <div className='flightData'>
-                    <span>Origem: {props.origin}</span>
-                    <span>Destino: {props.destiny}</span>
-                    <span>Ida: {props.departure}</span>
-                    <span>Volta: {props.back}</span>
-                    <span className='flightCompany'>{props.company}</span>
+                    <span>Origem: {props.from}</span>
+                    <span>Destino: {props.to}</span>
+                    <span>Ida: {props.depart}</span>
+                    <span>Volta: {props.return}</span>
+                    <span className='flightCompany'>{props.airline}</span>
                 </div>
                 <div className='flightButton'>
-                    <Link to = '/cart'><button>Adicionar ao carrinho</button></Link>
+                    <BotaoToggle checked={props.checked} endpoint={props.endpoint}/>
                 </div>
             </div>
         </>
@@ -44,7 +43,7 @@ function Offer(props) {
             <img src= {props.image} alt="City" />
             <div className='offerBottom'>
                 <span>R$ {props.price}</span>
-                <BotaoToggle/>
+                <BotaoToggle checked={props.checked} endpoint={props.endpoint}/>
             </div>
         </div>
     )

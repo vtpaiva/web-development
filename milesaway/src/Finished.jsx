@@ -27,7 +27,7 @@ function Finished() {
         <Header/>
         <div id="successBox">
             <Box name="Sucesso!">
-                <h1>Compra concluida</h1>
+                <h1 id='sucess'>Compra concluida</h1>
                 <ArrayErase endpoint="flights"/>
                 <ArrayErase endpoint="stays"/>
             </Box>

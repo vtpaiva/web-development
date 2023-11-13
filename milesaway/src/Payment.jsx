@@ -46,7 +46,7 @@ function Payment() {
                 <div id='paymentLeft'>
                     <Box display = 'grid' name = 'Dados de pagamento'>
                         <div style={{'display' : 'flex', 'backgroundColor' : 'transparent'}}>
-                            <div style={{'display' : 'grid', 'backgroundColor' : 'transparent'}}>
+                            <div className='dataContainer'>
                                 <SubBox>
                                         <label htmlFor="name">Nome:</label>
                                         <input type="text" />
@@ -58,7 +58,7 @@ function Payment() {
                                 </SubBox>
                             </div>
 
-                            <div style={{'display' : 'grid', 'backgroundColor' : 'transparent'}}>
+                            <div className='dataContainer'>
                                 <SubBox>
                                         <label htmlFor="doc">Documento:</label>
                                         <input type="text" />
@@ -71,14 +71,12 @@ function Payment() {
                             </div>
                         </div>
 
-                        <br></br>
-
-                        
+                        <div className='dataContainer'>
                         <SubBox>
                                 <label htmlFor="credit">Cartão de crédito:</label>
                                 <input type="text" />
                         </SubBox>
-                        
+                        </div>
                         <div style={{'display' : 'flex', 'backgroundColor' : 'transparent'}}>
                             <SubBox>
                                     <label htmlFor="val">Validade:</label>
@@ -95,18 +93,18 @@ function Payment() {
 
                 <div id='paymentRight'>
                     <Box name='Finalizar compra' display="block">
-                        <h2>Voos</h2>
+                        <h2 id = "fly">Voos</h2>
                         {errorF && <p>{errorF}</p>}
                         {isPendingF && <p>Loading...</p>}
                         {dataF && dataF.map(item => {
                             if(item.checked === true)
                                 return (
-                                <Item destiny={item.to} price={item.price}/>
+                                <Item className = 'flightBuy' destiny={item.to} price={item.price}/>
                                 )
                             return null;
                         })}
                         <br/>
-                        <h2>Hoteis</h2>
+                        <h2 id='hotel'>Hoteis</h2>
                         {errorS && <p>{errorS}</p>}
                         {isPendingS && <p>Loading...</p>}
                         {dataS && dataS.map(item => {
@@ -117,7 +115,7 @@ function Payment() {
                             return null;
                         })}
                         <br/>
-                        <fieldset>
+                        <fieldset id='total'>
                             <h1>Total: R$ {total}</h1>
                         </fieldset>
                         <Link to="/finished"> <button id='finishButton'>Finalizar compra</button> </Link>

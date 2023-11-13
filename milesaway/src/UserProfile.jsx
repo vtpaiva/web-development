@@ -33,7 +33,7 @@ function UserProfile() {
                     <div id='changeContainer'>
                         <SubBox>
                                 <label htmlFor="email">Nome:<br></br></label>
-                                <input type="email" placeholder='Digite o username' onChange={(e) => setTempUserName(e.target.value)}/>
+                                <input type="email" placeholder='"user" ou "admin"' onChange={(e) => setTempUserName(e.target.value)}/>
                         </SubBox>
                     </div>
                     <button id='button' onClick={() => setUserName(tempUserName)}>Submeter</button>
@@ -78,8 +78,8 @@ function UserProfile() {
                 </div>
                 <Box>
                     <div id='options'>
-                        <Link to = '/registerAdmin'><SubBox>Registrar Administradores*</SubBox></Link>
-                        <Link to = '/registerClient'><SubBox>Registrar Clientes*</SubBox></Link>
+                        <Link to = '/registerAdmin'><SubBox>Registrar Administradores</SubBox></Link>
+                        <Link to = '/registerClient'><SubBox>Registrar Clientes</SubBox></Link>
                         <Link to = '/manageOffers'> <SubBox>Gerenciar ofertas</SubBox></Link>
         { /* <SubBox>Minhas avaliações</SubBox> */ }
                     </div>

@@ -39,7 +39,7 @@ Trabalho de Introdução ao Desenvolvimento Web - SCC0219 (2023.2)
 https://github.com/vtpaiva/Introducao-Web-2023.2/assets/101905045/e7e831d6-fcc7-4163-8b87-fe4c9e452825
 
 * Essa interação pode também ser descrita a partir do diagrama abaixo.
-![Diagrama](Diagram.png)
+![Diagrama](Diagram.jpg)
 
 * Além do uso da ferramenta figma, alguns mockups foram implementadas em HTML e CSS ([Landing Page](landingPage.html), [Login](signin.html), [Cadastro](signup.html), [Pagamento](buyPage.html)).
 

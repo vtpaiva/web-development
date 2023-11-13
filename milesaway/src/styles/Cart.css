@@ -6,9 +6,9 @@
 
 .offerContainer {
     display: flex;
-    background-color: #e3f25e;
-    padding: 8px 20px 5px 5px;
-    border: solid #9ea844;
+    background-color: #39405c;
+    padding: 8px 20px 8px 8px;
+    border: solid #2a2f42;
     border-width: 0 5px 5px 0;
     border-radius: 15px;
     width: fit-content;
@@ -18,7 +18,8 @@
 .offerContainer > img {
     height: 250px;
     border-radius: 15px;
-    border: 2px solid #9ea844;
+    border: 2px solid #2a2f42;
+    box-shadow: 0px 5px 3px #2a2f42;
     border-width: 0 4px 4px 0;
     margin: 0 20px 0 0;
 }
@@ -32,8 +33,14 @@
 .offerDesc > span {
     font-weight: bold;
     display: block;
-    background-color: transparent;
-    margin: 10px 5px 50px 10px;
+    color: whitesmoke;
+    background: rgb(227,242,94);
+    background: radial-gradient(circle, rgba(227,242,94,1) 0%, rgba(38,41,53,1) 0%, rgba(38,41,53,1) 50%,rgb(23, 25, 37) 100%); 
+    margin: 9px auto 9px auto;
+    border: 2px solid #1a1e2b;
+    outline: 2px solid black;
+    outline-offset: 1px;
+    border-radius: 5px;
 }
 
 .offerDesc > .quantityButton {
@@ -61,7 +68,7 @@
     height: 50px;
 }
 
-.quantityButton > button:hover {
+button:hover {
     filter: brightness(1.2);
     cursor: pointer;
 }

@@ -1,31 +1,124 @@
-import React from 'react';
-import './styles/Box.css'
-
-function Box(props) {
-    return (
-        <div className='defaultBox'>
-            <fieldset style={{'display' : props.display ? props.display : 'flex'}}>
-                {props.name ? <legend>{props.name}</legend> : null}
-                {props.children}
-            </fieldset>
-        </div>
-    )
+.defaultBox {
+    margin: 30px auto 30px auto;
+    background-color: #222638;
+    border-radius: 10px;
+    box-shadow: 10px 15px #11131c;
+    padding: 10px;
+    color: white;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
 }
 
-function SubBox(props) {
-    return (
-        <div className='defaultSubBox'>
-            {props.children}
-        </div>
-    )
+.defaultBox > fieldset {
+    background-color: #222638;
+    border-image: linear-gradient(to bottom, #4d5780 0%, #4d5780 50%, #222638 100%) 1;
+    padding: 15px;
+    justify-content: center;
 }
 
-function ASubBox(props) {
-    return (
-        <div className='alignedSubBox'>
-            {props.children}
-        </div>
-    )
+.defaultBox > fieldset > legend {
+    background-color: transparent;
+    font-size: 40px;
+    border: solid #4d5780;
+    border-width: 0 5px 0 5px;
+    border-radius: 8px;
+    margin: auto;
+    padding: 0 20px 0 20px;
 }
 
-export {Box, SubBox, ASubBox}
+.defaultBox > fieldset > .innerBox {
+    background-color: transparent;
+}
+
+.defaultSubBox {
+    padding: 10px;
+    background-color: #39405c;
+    border-radius: 10px;
+    border: 2px solid #4d5780;
+    outline: 2px solid #4d5780;
+    outline-offset: 2px;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+.defaultSubBox > label {
+    background-color: transparent;
+}
+
+.defaultSubBox > input {
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+
+.alignedSubBox {
+    padding: 10px;
+    background-color: #39405c;
+    border-radius: 10px;
+    border: 2px solid #4d5780;
+    outline: 2px solid #4d5780;
+    outline-offset: 2px;
+    margin-left: calc(50%);
+    transform: translateX(-50%);
+    width: fit-content;
+    height: fit-content;
+}
+
+.alignedSubBox > label {
+    background-color: transparent;
+}
+
+.alignedSubBox > input {
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.defaultBox > button {
+    background-color: rgb(227,242,94);
+    font-weight: bold;
+    height: 50px;
+    width: 100px;
+    margin-top: 0px;
+    border: 3px solid #bdc94f;
+    border-radius: 25px;
+}
+
+.ticketBox {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: fit-content;
+    border-radius: 15px;
+}
+
+.ticketBox > div, .ticketBox > div > span {
+    color: black;
+    font-weight: bold;
+    background-color: #e3f25e;
+}
+
+.travelOD {
+    display: flex;
+}
+
+.travelDate {
+    display: flex;
+}
+
+.price {
+    display: block;
+}
+
+.price > button {
+    color: white;
+    background-color: #39405c;
+    font-weight: bold;
+    height: 50px;
+    width: 100px;
+    margin-top: 0px;
+    border: 3px solid #6e7aaa;
+    border-radius: 25px;
+}

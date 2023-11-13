@@ -44,38 +44,43 @@ function Payment() {
 
             <div id='paymentContainer'>
                 <div id='paymentLeft'>
-                    <Box display = 'block' name = 'Dados de pagamento'>
+                    <Box display = 'grid' name = 'Dados de pagamento'>
                         <div style={{'display' : 'flex', 'backgroundColor' : 'transparent'}}>
-                            <SubBox>
-                                    <label htmlFor="name">Nome:</label>
-                                    <input type="text" />
-                            </SubBox>
+                            <div style={{'display' : 'grid', 'backgroundColor' : 'transparent'}}>
+                                <SubBox>
+                                        <label htmlFor="name">Nome:</label>
+                                        <input type="text" />
+                                </SubBox>
 
-                            <SubBox>
-                                    <label htmlFor="surname">Sobrenome:</label>
-                                    <input type="text" />
-                            </SubBox>
+                                <SubBox>
+                                        <label htmlFor="surname">Sobrenome:</label>
+                                        <input type="text" />
+                                </SubBox>
+                            </div>
+
+                            <div style={{'display' : 'grid', 'backgroundColor' : 'transparent'}}>
+                                <SubBox>
+                                        <label htmlFor="doc">Documento:</label>
+                                        <input type="text" />
+                                </SubBox>
+
+                                <SubBox>
+                                        <label htmlFor="birth">Nascimento:</label>
+                                        <input type="date" />
+                                </SubBox>
+                            </div>
                         </div>
 
-                        <div style={{'display' : 'flex', 'backgroundColor' : 'transparent'}}>
-                            <SubBox>
-                                    <label htmlFor="doc">Documento:</label>
-                                    <input type="text" />
-                            </SubBox>
+                        <br></br>
 
-                            <SubBox>
-                                    <label htmlFor="birth">Nascimento:</label>
-                                    <input type="text" />
-                            </SubBox>
-                        </div>
-
+                        
                         <SubBox>
                                 <label htmlFor="credit">Cartão de crédito:</label>
                                 <input type="text" />
                         </SubBox>
-
+                        
                         <div style={{'display' : 'flex', 'backgroundColor' : 'transparent'}}>
-                            <SubBox margin = '15px'>
+                            <SubBox>
                                     <label htmlFor="val">Validade:</label>
                                     <input type="date" />
                             </SubBox>

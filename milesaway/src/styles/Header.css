@@ -18,7 +18,7 @@
 }
 
 #mainContainer {
-    width: 1313px;
+    width: calc(100vw - 40px);
     text-align: center;
     align-items: center;
     background-color: transparent;
@@ -31,7 +31,6 @@
     display: block;
     filter: drop-shadow(10px 5px 5px rgb(236, 247, 143));
     height: 150px;
-    margin-left: 10px;
     scale: 70%;
     text-align: left;
     width: auto;
@@ -51,6 +50,7 @@
     display: flex;
     justify-content: space-around;
     text-align: right;
+    margin: 0px 20px 0px 10px;
 }
 
 #cornerLinks > a, #mainContainer > a {

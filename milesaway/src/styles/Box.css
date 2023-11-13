@@ -11,7 +11,6 @@
 }
 
 .defaultBox > fieldset {
-    padding: 5px;
     background-color: #222638;
     border-image: linear-gradient(to bottom, #4d5780 0%, #4d5780 50%, #222638 100%) 1;
     padding: 15px;
@@ -51,6 +50,29 @@
 .defaultSubBox > input {
     border-radius: 10px;
     background-color: white;
+}
+
+.alignedSubBox {
+    padding: 10px;
+    background-color: #39405c;
+    border-radius: 10px;
+    border: 2px solid #4d5780;
+    outline: 2px solid #4d5780;
+    outline-offset: 2px;
+    margin-left: calc(50%);
+    transform: translateX(-50%);
+    width: fit-content;
+    height: fit-content;
+}
+
+.alignedSubBox > label {
+    background-color: transparent;
+}
+
+.alignedSubBox > input {
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
 }
 
 .defaultBox > button {

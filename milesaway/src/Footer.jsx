@@ -1,4 +1,4 @@
-import {Box, SubBox} from './Box.jsx'
+import {Box, ASubBox} from './Box.jsx'
 
 import './styles/Footer.css'
 
@@ -21,10 +21,10 @@ function Footer() {
                 </section>
             </div>
             <Box name = 'Receber ofertas por e-mail' display = 'block'>
-                    <SubBox>
+                    <ASubBox>
                         <label htmlFor="email">E-mail: </label>
                         <input type="email" name="email" placeholder='Seu melhor e-mail' />
-                    </SubBox>
+                    </ASubBox>
                     <button className='defaultButton'>Inscrever-se</button>
                 </Box>
         </footer>

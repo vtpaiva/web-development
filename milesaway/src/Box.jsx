@@ -20,4 +20,12 @@ function SubBox(props) {
     )
 }
 
-export {Box, SubBox}
+function ASubBox(props) {
+    return (
+        <div className='alignedSubBox'>
+            {props.children}
+        </div>
+    )
+}
+
+export {Box, SubBox, ASubBox}

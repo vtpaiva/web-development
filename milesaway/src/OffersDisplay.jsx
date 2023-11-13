@@ -12,7 +12,7 @@ function OffersDisplay() {
     return (
         <>
             <Header/>
-                <div id='flightOffers'>
+                <div id='flightOffers' style={{'display' : 'flex'}}>
                     {errorF && <p>{errorF}</p>}
                     {isPendingF && <p>Loading...</p>}
                     {dataF && dataF.map(item => (

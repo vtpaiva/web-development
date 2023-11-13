@@ -19,7 +19,7 @@
       "to": "Rio de Janeiro",
       "depart": "2023-07-15",
       "return": "2023-08-09",
-      "airline": "Emirates",
+      "airline": "Latam",
       "image": "rj.jpg",
       "price": 563
     },
@@ -27,34 +27,56 @@
       "id": 1,
       "checked": false,
       "from": "Sao Carlos",
-      "to": "Sao Paulo",
+      "to": "Rio de Janeiro",
       "depart": "2023-07-15",
       "return": "2023-08-09",
       "airline": "Emirates",
-      "image": "pr.jpg",
-      "price": 368
+      "image": "rj.jpg",
+      "price": 966
     },
     {
       "id": 2,
       "checked": false,
       "from": "Sao Carlos",
-      "to": "Teste 1",
+      "to": "Rio de Janeiro",
       "depart": "2023-07-15",
       "return": "2023-08-09",
-      "airline": "Emirates",
+      "airline": "Gol",
       "image": "rj.jpg",
-      "price": 2834
+      "price": 563
     },
     {
       "id": 3,
       "checked": false,
       "from": "Sao Carlos",
-      "to": "Teste 2",
+      "to": "Sao Paulo",
+      "depart": "2023-07-15",
+      "return": "2023-08-09",
+      "airline": "Azul",
+      "image": "pr.jpg",
+      "price": 124
+    },
+    {
+      "id": 4,
+      "checked": false,
+      "from": "Sao Carlos",
+      "to": "Sao Paulo",
+      "depart": "2023-07-15",
+      "return": "2023-08-09",
+      "airline": "Gol",
+      "image": "pr.jpg",
+      "price": 455
+    },
+    {
+      "id": 4,
+      "checked": false,
+      "from": "Sao Carlos",
+      "to": "Sao Paulo",
       "depart": "2023-07-15",
       "return": "2023-08-09",
       "airline": "Emirates",
       "image": "pr.jpg",
-      "price": 983
+      "price": 777
     }
   ],
   "stays": [
@@ -75,6 +97,15 @@
       "checkOut": "2023-08-09",
       "image": "hotelsp.jpg",
       "price": 295
+    },
+    {
+      "id": 2,
+      "checked": false,
+      "city": "Sao Paulo",
+      "checkIn": "2023-07-15",
+      "checkOut": "2023-08-09",
+      "image": "hotelsp.jpg",
+      "price": 255
     }
   ]
 }

@@ -7,7 +7,7 @@ Trabalho de Introdução ao Desenvolvimento Web - SCC0219 (2023.2)
 | ---- | ---- |
 | Jean Michel Furtado M'Peko | 5271916 |
 | Vítor Augusto Paiva de Brito | 13732303 |
-|  |  |
+| Gabriel Cazzini Cardoso | 12547771 |
 
 ---
 

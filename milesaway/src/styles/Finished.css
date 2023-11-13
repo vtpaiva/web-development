@@ -1,3 +1,7 @@
 #successBox > * {
     width: 70%;
 }
+
+#sucess {
+    background-color: transparent;
+}

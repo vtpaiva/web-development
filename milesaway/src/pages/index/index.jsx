@@ -33,7 +33,6 @@ function LandingPage() {
         partida: '',
         volta: '',
         passageiros: '',
-        bagagem: ''
     });
 
     const navigate = useNavigate();
@@ -64,7 +63,7 @@ function LandingPage() {
                             <input type="text"
                                 name="origem"
                                 value={formData.origem}
-                                onChange={handleChange} 
+                                onChange={handleChange}
                                 placeholder='Origem'
                                 required/>
                         </ASubBox>
@@ -73,7 +72,7 @@ function LandingPage() {
                             <input type="text"
                                 name="destino"
                                 value={formData.destino}
-                                onChange={handleChange} 
+                                onChange={handleChange}
                                 placeholder='Destino'
                                 required/>
                         </ASubBox>
@@ -82,10 +81,10 @@ function LandingPage() {
                         <ASubBox>
                             <label htmlFor="partida">Partida:</label>
                             <input type="date"
-                                name="ida"
-                                value={formData.ida}
-                                onChange={handleChange} 
-                                placeholder='Ida'
+                                name="partida"
+                                value={formData.partida}
+                                onChange={handleChange}
+                                placeholder='Partida'
                                 required/>
                         </ASubBox>
                         <ASubBox>
@@ -93,7 +92,7 @@ function LandingPage() {
                             <input type="date"
                                 name="volta"
                                 value={formData.volta}
-                                onChange={handleChange} 
+                                onChange={handleChange}
                                 placeholder='Volta'
                                 required/>
                         </ASubBox>
@@ -106,15 +105,6 @@ function LandingPage() {
                                 value={formData.passageiros}
                                 onChange={handleChange} 
                                 placeholder='Passageiros'
-                                required/>
-                        </ASubBox>
-                        <ASubBox>
-                            <label htmlFor="bagagem">Bagagem:</label>
-                            <input type="number"
-                                name="bagagem"
-                                value={formData.bagagem}
-                                onChange={handleChange} 
-                                placeholder='Bagagem'
                                 required/>
                         </ASubBox>
                     </div>

@@ -31,7 +31,7 @@ const schema = new Schema({
         type: Number,
         required: true
     },
-    rooms: { // ex. 18
+    left: { // ex. 18
         type: Number,
         required: true
     },

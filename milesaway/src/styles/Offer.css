@@ -51,6 +51,18 @@
     border: 2px solid white;
 }
 
+.added {
+    left: 300px;
+    top: 20px;
+    width: 180px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    background-color: #2b5c34;
+    border-radius: 30px;
+    border: 2px solid white;
+}
+
 .remove {
     left: 300px;
     top: 20px;

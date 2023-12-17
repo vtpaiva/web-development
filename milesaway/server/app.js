@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import bodyParser from 'body-parser';
 
 import index from './routes/index.js';
@@ -9,6 +10,7 @@ import accounts from './routes/accounts.js';
 import mongoose from 'mongoose';
 
 const app = express();
+app.use(cors());
 
 mongoose.connect('mongodb+srv://usp:usp@webdilvan.ug0i0bq.mongodb.net/web?retryWrites=true&w=majority');
 

@@ -3,16 +3,11 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
-    slug: {
+    email: {
         type: String,
-        required: [true, 'A slug is required'],
-        trim: true,
+        required: [true, 'An email is required'],
         index: true,
-        unique: true
-    },
-    username: {
-        type: String,
-        required: true,
+        unique: true,
         trim: true
     },
     password: {

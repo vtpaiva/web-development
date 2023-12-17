@@ -5,7 +5,7 @@ import Stay from '../models/stays.js';
 const controller = {};
 
 controller.get = async (req, res) => {
-    const products = await Stay.find({active: true}, 'title price slug')
+    const products = await Stay.find({active: true}, 'slug price city checkIn checkOut establishment image left')
         .then(products => {
             res.status(200).send(products);
         })
@@ -53,7 +53,8 @@ controller.post = async (req, res) => {
 }
 
 controller.put = async (req, res) => {
-    await Stay.findByIdAndUpdate(req.params.id, { $set: req.body })
+    //await Stay.findByIdAndUpdate(req.params.id, { $set: req.body })
+    await Stay.findOneAndUpdate({ slug: req.params.slug }, { $set: req.body })
         .then(product => {
             res.status(201).send({
                 message: "Stay updated!"

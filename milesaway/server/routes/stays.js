@@ -8,7 +8,7 @@ router.get('/:slug', controller.getBySlug);
 
 router.post('/', controller.post);
 
-router.put('/:id', controller.put);
+router.put('/:slug', controller.put);
 
 router.delete('/:slug', controller.delete);
 

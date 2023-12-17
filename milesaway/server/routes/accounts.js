@@ -4,12 +4,14 @@ import controller from '../controllers/accounts-controller.js';
 const router = express.Router();
 
 router.get('/', controller.get);
-router.get('/:slug', controller.getBySlug);
+router.get('/:email/:password', controller.getByEmailAndPassword);
 
 router.post('/', controller.post);
 
-router.put('/:id', controller.put);
+router.put('/:email/:password', controller.put);
+router.put('/flightCart/:email/:password', controller.addFlightToCart);
+router.put('/stayCart/:email/:password', controller.addStayToCart);
 
-router.delete('/:slug', controller.delete);
+router.delete('/:email/:password', controller.delete);
 
 export default router;

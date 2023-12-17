@@ -1,18 +1,17 @@
 import './styles/App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import OffersDisplay from './OffersDisplay.jsx'
-import LandingPage from './LandingPage'
-import SingIn from './SingIn'
-import SingUp from './SingUp.jsx'
-import UserProfile from './UserProfile.jsx'
-import AdministratorProfile from './AdministratorProfile'
-import Hoteis from './Hoteis'
-import Booking from './Booking'
-import {Cart, CartOffer} from './Cart.jsx'
-import {Payment, Item} from './Payment.jsx'
-import Finished from './Finished.jsx'
-import {Password, Email} from './Change.jsx'
-import { RegisterAdmins, RegisterClients, ManageOffers } from './Admin.jsx'
+import OffersDisplay from './pages/offers/OffersDisplay'
+import LandingPage from './pages/index/index'
+import Login from './pages/login/Login'
+import UserProfile from './pages/profile/UserProfile'
+//import AdministratorProfile from './pages/profile/AdministratorProfile'
+import Hoteis from './pages/hotel/Hoteis'
+//import Booking from './pages/Booking'
+import {Cart, CartOffer} from './pages/cart/Cart'
+import {Payment, Item} from './pages/payment/Payment'
+import Finished from './pages/finished/Finished'
+import {Password, Email} from './pages/change/Change'
+import { RegisterAdmins, RegisterClients, ManageOffers } from './pages/admin/Admin'
 
 function App() {
     return (
@@ -21,15 +20,18 @@ function App() {
             <Route path="/" element={<LandingPage/>}/>
             <Route path="/hotel" element={<Hoteis/>}/>
             <Route path="/profile" element={<UserProfile/>}/>
-            <Route path="/admprofile" element={<AdministratorProfile/>}/>
-            <Route path="/booking" element={<Booking/>}/>
-            <Route path="/singin" element={<SingIn/>}/>
-            <Route path="/singup" element={<SingUp/>}/>
+        {
+            //<Route path="/admprofile" element={<AdministratorProfile/>}/>
+        }
+        {
+            //<Route path="/booking" element={<Booking/>}/>
+        }
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/login" element={<Login/>}/>
             <Route path="/offers" element={<OffersDisplay/>}/>
             <Route path="/cart" element={<Cart/>}/>
             <Route path="/payment" element={<Payment/>}/>
             <Route path="/finished" element={<Finished/>}/>
-            <Route path="/cart" element={<Cart/>}/>
             <Route path="/password" element={<Password/>}/>
             <Route path="/email" element={<Email/>}/>
             <Route path='/registerAdmin' element={<RegisterAdmins/>}/>

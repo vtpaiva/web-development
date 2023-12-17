@@ -5,13 +5,13 @@ import Flight from '../models/flights.js';
 const controller = {};
 
 controller.get = async (req, res) => {
-    const products = await Flight.find({active: true}, 'title price slug')
-        .then(products => {
-            res.status(200).send(products);
+    const flights = await Flight.find({active: true}, 'slug price origin destination departure arrival airline image left')
+        .then(flights => {
+            res.status(200).send(flights);
         })
         .catch(err => {
             res.status(500).send({
-                message: "Error getting products!",
+                message: "Error getting flights!",
                 error: err.message,
                 data: err
             });
@@ -20,13 +20,13 @@ controller.get = async (req, res) => {
 }
 
 controller.getBySlug = async (req, res) => {
-    const product = await Flight.findOne({slug: req.params.slug, active: true})
-        .then(product => {
-            res.status(200).send(product);
+    const flight = await Flight.findOne({slug: req.params.slug, active: true})
+        .then(flight => {
+            res.status(200).send(flight);
         })
         .catch(err => {
             res.status(500).send({
-                message: "Error getting product!",
+                message: "Error getting flight!",
                 error: err.message,
                 data: err
             });
@@ -34,16 +34,16 @@ controller.getBySlug = async (req, res) => {
 }
 
 controller.post = async (req, res) => {
-    const product = new Flight(req.body);
-    await product.save()
-        .then(product => {
+    const flight = new Flight(req.body);
+    await flight.save()
+        .then(flight => {
             res.status(201).send({
                 message: "Flight created!"
             });
         })
         .catch(err => {
         res.status(500).send({
-            message: "Error creating product!",
+            message: "Error creating flight!",
             error: err.message,
             data: err
         });
@@ -53,15 +53,17 @@ controller.post = async (req, res) => {
 }
 
 controller.put = async (req, res) => {
-    await Flight.findByIdAndUpdate(req.params.id, { $set: req.body })
-        .then(product => {
+    //await Flight.findByIdAndUpdate(req.params.id, { $set: req.body })
+    console.log(req.body);
+    await Flight.findOneAndUpdate({ slug: req.params.slug }, { $set: req.body })
+        .then(flight => {
             res.status(201).send({
                 message: "Flight updated!"
             });
         })
         .catch(err => {
             res.status(500).send({
-                message: "Error updating product!",
+                message: "Error updating flight!",
                 error: err.message,
                 data: err
             });
@@ -70,14 +72,14 @@ controller.put = async (req, res) => {
 
 controller.delete = async (req, res) => {
     await Flight.findOneAndDelete({ slug: req.params.slug })
-        .then(product => {
+        .then(flight => {
             res.status(201).send({
                 message: "Flight deleted!"
             });
         })
         .catch(err => {
             res.status(500).send({
-                message: "Error deleting product!",
+                message: "Error deleting flight!",
                 error: err.message,
                 data: err
             });

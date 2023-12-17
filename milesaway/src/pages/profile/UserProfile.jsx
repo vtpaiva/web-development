@@ -33,11 +33,9 @@ function UserProfile() {
                 <Box>
                     <div id='options'>
                         <Link to = '/password'><SubBox>Alterar senha</SubBox></Link>
-                    </div>
-                    <div id='options'>
-              <button onClick={handleLogout}>
-                <SubBox>Logout</SubBox>
-              </button>
+                      <button onClick={handleLogout}>
+                        <SubBox>Logout</SubBox>
+                      </button>
                     </div>
                 </Box>
             </>
@@ -52,6 +50,9 @@ function UserProfile() {
                         <Link to = '/registerAdmin'><SubBox>Registrar Administradores</SubBox></Link>
                         <Link to = '/registerClient'><SubBox>Registrar Clientes</SubBox></Link>
                         <Link to = '/manageOffers'> <SubBox>Gerenciar ofertas</SubBox></Link>
+                      <button onClick={handleLogout}>
+                        <SubBox>Logout</SubBox>
+                      </button>
                     </div>
                 </Box>
                 </>

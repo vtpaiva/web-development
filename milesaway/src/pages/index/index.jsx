@@ -127,9 +127,14 @@ function LandingPage() {
                 {error && <p>{error}</p>}
                 {isPending && <p>Loading...</p>}
                 {console.log(data)}
-                {data && data.map(item => (
-                    <FlightOffer key={"LP"+item.slug} endpoint={"flights/"+item.slug} type="flight" {...item}/>
-                ))}
+                {data && data.map(item => {
+                    if(item.left > 0) {
+                        return (
+                        <FlightOffer key={"LP"+item.slug} endpoint={"flights/"+item.slug} type="flight" {...item}/>
+                        )
+                    }
+                    return null;
+                })}
             </div>
             <Footer/>
         </>

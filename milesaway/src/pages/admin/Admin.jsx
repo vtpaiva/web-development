@@ -313,6 +313,14 @@ function Settings(props) {
                             value={updatedData.establishment || props.item.establishment}
                             onChange={(e) => handleInputChange('establishment', e.target.value)}
                           />
+                          <label htmlFor="left">left</label>
+                          <input
+                            type="text"
+                            name="left"
+                            id="left"
+                            value={updatedData.left || props.item.left}
+                            onChange={(e) => handleInputChange('left', e.target.value)}
+                          />
                         </div>
                     )
             default:

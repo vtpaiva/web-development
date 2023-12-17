@@ -35,6 +35,7 @@ function BotaoToggle(props) {
         const clampedQuantity = Math.min(Math.max(newQuantity, 0), max);
         console.log(max, newQuantity, clampedQuantity); // prints newQuantity ok
         setSelectedQuantity(clampedQuantity);
+        setCheck(false);
     };
 
     const addToCart = async () => {

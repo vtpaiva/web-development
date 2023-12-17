@@ -64,7 +64,6 @@ const AuthPage = () => {
             // User not logged in, show login/signup form
             <div>
               <Box display="block" name="Iniciar sessão">
-                <div className="centerBox">
                   <SubBox>
                     <label htmlFor="usuario">Email</label>
                     <input
@@ -85,13 +84,11 @@ const AuthPage = () => {
                       onChange={(e) => setPassword(e.target.value)}
                     />
                   </SubBox>
-                </div>
                 <button className="defaultButton" onClick={handleLogin}>
                   Enviar
                 </button>
               </Box>
               <Box display="block" name="Registrar">
-                <div className="centerBox">
                   <SubBox>
                     <label htmlFor="newUsuario">Novo Email</label>
                     <input
@@ -112,7 +109,6 @@ const AuthPage = () => {
                       onChange={(e) => setPassword(e.target.value)}
                     />
                   </SubBox>
-                </div>
                 <button className="defaultButton" onClick={handleSignup}>
                   Registrar
                 </button>

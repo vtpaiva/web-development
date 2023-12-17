@@ -20,13 +20,6 @@ function Footer() {
                     </figure>
                 </section>
             </div>
-            <Box name = 'Receber ofertas por e-mail' display = 'block'>
-                    <ASubBox>
-                        <label htmlFor="email">E-mail: </label>
-                        <input type="email" name="email" placeholder='Seu melhor e-mail' />
-                    </ASubBox>
-                    <button className='defaultButton'>Inscrever-se</button>
-                </Box>
         </footer>
     )
 }

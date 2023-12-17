@@ -10,7 +10,7 @@ import Hoteis from './pages/hotel/Hoteis'
 import {Cart, CartOffer} from './pages/cart/Cart'
 import {Payment, Item} from './pages/payment/Payment'
 import Finished from './pages/finished/Finished'
-import {Password, Email} from './pages/change/Change'
+import {Password} from './pages/change/Change'
 import { RegisterAdmins, RegisterClients, ManageOffers } from './pages/admin/Admin'
 
 function App() {
@@ -20,12 +20,6 @@ function App() {
             <Route path="/" element={<LandingPage/>}/>
             <Route path="/hotel" element={<Hoteis/>}/>
             <Route path="/profile" element={<UserProfile/>}/>
-        {
-            //<Route path="/admprofile" element={<AdministratorProfile/>}/>
-        }
-        {
-            //<Route path="/booking" element={<Booking/>}/>
-        }
             <Route path="/login" element={<Login/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/offers" element={<OffersDisplay/>}/>
@@ -33,7 +27,6 @@ function App() {
             <Route path="/payment" element={<Payment/>}/>
             <Route path="/finished" element={<Finished/>}/>
             <Route path="/password" element={<Password/>}/>
-            <Route path="/email" element={<Email/>}/>
             <Route path='/registerAdmin' element={<RegisterAdmins/>}/>
             <Route path='/registerClient' element={<RegisterClients/>}/>
             <Route path='/manageOffers' element={<ManageOffers/>}/>

@@ -50,6 +50,7 @@ function UserProfile() {
                         <Link to = '/registerAdmin'><SubBox>Registrar Administradores</SubBox></Link>
                         <Link to = '/registerClient'><SubBox>Registrar Clientes</SubBox></Link>
                         <Link to = '/manageOffers'> <SubBox>Gerenciar ofertas</SubBox></Link>
+                        <Link to = '/password'><SubBox>Alterar senha</SubBox></Link>
                       <button onClick={handleLogout}>
                         <SubBox>Logout</SubBox>
                       </button>

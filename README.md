@@ -78,6 +78,8 @@ As linguagens e ferramentas principais utilizadas no desenvolvimento foram: HTML
 
 ## Test Plan
 * Testes de servidor realizados usando Insomnia.
+   * Exemplo: ![image](https://github.com/vtpaiva/Introducao-Web-2023.2/assets/101905045/80fcb68f-4218-4a18-91df-697abb1d303c)
+
 * Testes da interface realizados de maneira manual.
 
 ## Test Results

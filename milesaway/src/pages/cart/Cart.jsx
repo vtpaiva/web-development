@@ -29,7 +29,6 @@ function Cart(props) {
     useEffect(() => {
         const fetchDataF = async () => {
             try {
-                // Fetch details for flights in the user's cart
                 const promises = user.cartFlights.map((cartItem) =>
                     axios.get(`http://localhost:4001/flights/${cartItem[0]}`)
                 );
@@ -38,7 +37,7 @@ function Cart(props) {
                 const flightData = responses.map((response) => response.data);
                 setDataF(flightData);
             } catch (error) {
-                setErrorF(error.message || 'An error occurred while fetching flight data.');
+                setErrorF(error.message || 'Erro ocorreu enquanto carregava os dados de voo');
             } finally {
                 setIsPendingF(false);
             }
@@ -46,7 +45,6 @@ function Cart(props) {
 
         const fetchDataS = async () => {
             try {
-                // Fetch details for stays in the user's cart
                 const promises = user.cartStays.map((cartItem) =>
                     axios.get(`http://localhost:4001/stays/${cartItem[0]}`)
                 );
@@ -55,7 +53,7 @@ function Cart(props) {
                 const stayData = responses.map((response) => response.data);
                 setDataS(stayData);
             } catch (error) {
-                setErrorS(error.message || 'An error occurred while fetching stay data.');
+                setErrorS(error.message || 'Erro ocorreu enquanto carregava os dados de estadia');
             } finally {
                 setIsPendingS(false);
             }
@@ -67,10 +65,8 @@ function Cart(props) {
 
     useEffect(() => {
         if (dataS.length > 0 || dataF.length > 0) {
-            //console.log(dataF, dataS, user);
             let total = 0;
 
-            // Calculate total for flights
             dataF.forEach((flight, index) => {
                 const cartItem = user.cartFlights[index];
                 if (cartItem && flight && cartItem[1] > 0) {
@@ -78,7 +74,6 @@ function Cart(props) {
                 }
             });
 
-            // Calculate total for stays
             dataS.forEach((stay, index) => {
                 const cartItem = user.cartStays[index];
                 if (cartItem && cartItem[1] > 0) {

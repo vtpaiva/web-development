@@ -9,14 +9,12 @@ function OffersDisplay() {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
 
-  // Retrieve data from the URL
   const origem = searchParams.get('origem') || '';
   const destino = searchParams.get('destino') || '';
   const partida = searchParams.get('partida') || '';
   const volta = searchParams.get('volta') || '';
   const passageiros = searchParams.get('passageiros') || '';
 
-  // State for flight and stay data
   const [dataF, setDataF] = useState(null);
   const [isPendingF, setIsPendingF] = useState(true);
   const [errorF, setErrorF] = useState(null);
@@ -56,7 +54,6 @@ function OffersDisplay() {
       return new Date(date).toISOString().substring(0, 10);
   }
 
-  // Filter flights based on query parameters
   const filteredFlights = dataF
     ? dataF.filter((item) => {
         return (

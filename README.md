@@ -73,8 +73,45 @@ https://github.com/vtpaiva/Introducao-Web-2023.2/assets/101905045/e7e831d6-fcc7-
 * Quantidade vendida.
 
 ## Comments About the Code
+As linguagens e ferramentas principais utilizadas no desenvolvimento foram: HTML; CSS; JavaScript; React; react-router-dom (roteamento); axios (requisições); express (servidor); MongoDB e mongoose (database)
+
+
 ## Test Plan
+* Testes de servidor realizados usando Insomnia.
+* Testes da interface realizados de maneira manual.
+
 ## Test Results
+* Funcional.
+* Usuários para teste:
+    * Administradores:
+        * Email: admin1@example.com
+        * Password: senhateste
+        * Email: admin2@example.com
+        * Password: admin2password
+        * Email: admin3@example.com
+        * Password: admin3password
+    * Clientes:
+        * Email: user1@example.com
+        * Password: password1
+        * Email: user2@example.com
+        * Password: password2
+
 ## Build Procedures
+### Importe os módulos do node
+
+Importe a pasta "node_modules" de um projeto feito com create-react-app
+
+### Instale os modulos
+
+Dentro do diretório desta pasta no terminal, digite o comando `npm install`
+
+### Execute o projeto
+
+Por fim, em um terminal distinto, ainda da pasta, execute o comando `npm start`
+
+
 ## Problems
+Sem problemas encontrados.
+
 ## Comments
+Sem comentarios.

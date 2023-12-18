@@ -12,7 +12,6 @@ import UserProfile from '../profile/UserProfile';
 
 const AuthPage = () => {
     const navigate = useNavigate();
-    //const [user, setUser] = useState(null);
     const { user, login, logout, refresh } = useUser();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -24,7 +23,6 @@ const AuthPage = () => {
             if(response.data) {
                 const loggedInUser = response.data;
                 login(loggedInUser);
-                //navigate.goBack();
             }
             else {
                 throw new Error();
@@ -46,8 +44,6 @@ const AuthPage = () => {
 
             login(newUser);
 
-            //navigate.goBack();
-
         } catch (err) {
             setError('Signup failed. Please try again.');
         }
@@ -57,13 +53,10 @@ const AuthPage = () => {
         <>
         <Header />
         {user ? (
-            // User is already logged in
             <div>
-              {/* Display other user-related content or allow logout */}
             <UserProfile />
             </div>
           ) : (
-            // User not logged in, show login/signup form
             <div>
               <Box display="block" name="Iniciar sessão">
                   <SubBox>

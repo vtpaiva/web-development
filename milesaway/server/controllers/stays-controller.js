@@ -53,7 +53,6 @@ controller.post = async (req, res) => {
 }
 
 controller.put = async (req, res) => {
-    //await Stay.findByIdAndUpdate(req.params.id, { $set: req.body })
     await Stay.findOneAndUpdate({ slug: req.params.slug }, { $set: req.body })
         .then(product => {
             res.status(201).send({

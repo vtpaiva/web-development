@@ -53,7 +53,6 @@ controller.post = async (req, res) => {
 }
 
 controller.put = async (req, res) => {
-    //await Flight.findByIdAndUpdate(req.params.id, { $set: req.body })
     console.log(req.body);
     await Flight.findOneAndUpdate({ slug: req.params.slug }, { $set: req.body })
         .then(flight => {

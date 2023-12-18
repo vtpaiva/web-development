@@ -20,7 +20,7 @@ function Hoteis() {
                 const response = await axios.get('http://localhost:4001/flights');
                 setFlights(response.data);
             } catch (error) {
-                setErrorFlights(error.message || 'An error occurred while fetching flight data.');
+                setErrorFlights(error.message || 'Erro ocorreu ao carregar os dados de voos');
             } finally {
                 setIsPendingFlights(false);
             }
@@ -31,7 +31,7 @@ function Hoteis() {
                 const response = await axios.get('http://localhost:4001/stays');
                 setStays(response.data);
             } catch (error) {
-                setErrorStays(error.message || 'An error occurred while fetching stay data.');
+                setErrorStays(error.message || 'Erro ocorreu ao carregar os dados de estadia');
             } finally {
                 setIsPendingStays(false);
             }

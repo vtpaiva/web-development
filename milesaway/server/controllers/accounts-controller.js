@@ -55,7 +55,6 @@ controller.post = async (req, res) => {
 }
 
 controller.put = async (req, res) => {
-    //await Account.findByIdAndUpdate(req.params.id, { $set: req.body })
     await Account.findOneAndUpdate({ email: req.params.email, password: req.params.password }, { $set: req.body })
         .then(account => {
             res.status(201).send({
@@ -76,7 +75,6 @@ controller.addFlightToCart = async (req, res) => {
         const { email, password } = req.params;
         const { slug, quantity } = req.body;
 
-        // Find the user's account by email and password
         const account = await Account.findOne({ email: email, password: password });
 
         if (!account) {
@@ -85,7 +83,6 @@ controller.addFlightToCart = async (req, res) => {
             });
         }
 
-        // Fetch flight details based on the provided slug
         const flight = await Flight.findOne({ slug: slug });
 
         if (!flight) {
@@ -94,27 +91,21 @@ controller.addFlightToCart = async (req, res) => {
             });
         }
 
-        // Check if the flight is already in the cart
         const existingFlightIndex = account.cartFlights.findIndex(([cartSlug]) => cartSlug === slug);
 
         if (existingFlightIndex !== -1) {
-            // Flight is already in the cart, update the quantity
             let newQuantity = Math.max(0, Math.min(flight.left, Number(account.cartFlights[existingFlightIndex][1]) + Number(quantity)));
 
-            // Update the quantity in the cart
             account.cartFlights[existingFlightIndex][1] = newQuantity;
 
-            // If the new quantity is 0, remove the flight from the cart
             if (newQuantity === 0) {
                 account.cartFlights.splice(existingFlightIndex, 1);
             }
         } else if (Number(quantity) > 0) {
-            // Flight is not in the cart, add it as a new tuple
             account.cartFlights.push([slug, Math.min(flight.left, Number(quantity))]);
             console.log("New: ", quantity);
         }
 
-        // Update the user's account with the modified cart
         await account.save();
 
         res.status(201).send({
@@ -136,7 +127,6 @@ controller.addStayToCart = async (req, res) => {
         const { email, password } = req.params;
         const { slug, quantity } = req.body;
 
-        // Find the user's account by email and password
         const account = await Account.findOne({ email: email, password: password });
 
         if (!account) {
@@ -145,7 +135,6 @@ controller.addStayToCart = async (req, res) => {
             });
         }
 
-        // Fetch stay details based on the provided slug
         const stay = await Stay.findOne({ slug: slug });
 
         if (!stay) {
@@ -154,26 +143,20 @@ controller.addStayToCart = async (req, res) => {
             });
         }
 
-        // Check if the stay is already in the cart
         const existingStayIndex = account.cartStays.findIndex(([cartSlug]) => cartSlug === slug);
 
         if (existingStayIndex !== -1) {
-            // Stay is already in the cart, update the quantity
             const newQuantity = Math.max(0, Math.min(stay.left, Number(account.cartStays[existingStayIndex][1]) + Number(quantity)));
 
-            // Update the quantity in the cart
             account.cartStays[existingStayIndex][1] = newQuantity;
 
-            // If the new quantity is 0, remove the stay from the cart
             if (newQuantity === 0) {
                 account.cartStays.splice(existingStayIndex, 1);
             }
         } else if (Number(quantity) > 0) {
-            // Stay is not in the cart, add it as a new tuple
             account.cartStays.push([slug, Math.min(stay.left, Number(quantity))]);
         }
 
-        // Update the user's account with the modified cart
         await account.save();
 
         res.status(201).send({

@@ -179,23 +179,61 @@ function Settings(props) {
 
     const handleSave = async () => {
         try {
-            // Make a PUT request to update the data on the server
             await axios.put(`http://localhost:4001/${props.type}s/${props.item.slug}`, updatedData);
 
-            // Close the popup after successful update
             setShowPopup(false);
 
             navigate(0);
         } catch (error) {
-            console.error('Error updating data:', error.message);
-            // Handle the error, e.g., display an error message to the user
+            console.error('Erro atualizando produto', error.message);
         }
     };
+
+    const handleNew = async () => {
+        try {
+            await axios.post(`http://localhost:4001/${props.type}s`, updatedData);
+
+            setShowPopup(false);
+
+            navigate(0);
+        } catch (error) {
+            console.error('Erro atualizando produto', error.message);
+        }
+    };
+
+    const handleDelete = async () => {
+        try {
+            const confirm = window.confirm('Tem certeza que deseja deletar este produto?');
+            if(!confirm) return;
+            await axios.delete(`http://localhost:4001/${props.type}s/${props.item.slug}`);
+
+            setShowPopup(false);
+
+            navigate(0);
+        }
+        catch (error) {
+            console.error("Erro deletando produto:", error.message);
+        }
+    }
+
+
     function renderSwitch() {
         switch(props.type) {
             case "flight":
                 return (
                     <div className="editOptions">
+                    {props.new &&
+                        <>
+                            <label htmlFor="slug">slug</label>
+                            <input
+                                type="text"
+                                name="slug"
+                                id="slug"
+                                value={updatedData.slug || props.item.slug}
+                                onChange={(e) => handleInputChange('slug', e.target.value)}
+                            />
+                        </>
+                    }
                       <label htmlFor="origin">origin</label>
                       <input
                         type="text"
@@ -265,6 +303,18 @@ function Settings(props) {
             case "stay":
                 return (
                     <div className="editOptions">
+                    {props.new &&
+                        <>
+                            <label htmlFor="slug">slug</label>
+                            <input
+                                type="text"
+                                name="slug"
+                                id="slug"
+                                value={updatedData.slug || props.item.slug}
+                                onChange={(e) => handleInputChange('slug', e.target.value)}
+                            />
+                        </>
+                    }
                       <label htmlFor="city">city</label>
                           <input
                             type="text"
@@ -339,7 +389,9 @@ function Settings(props) {
                         {renderSwitch()}
                     </Box>
                     <div className="popupContainer">
-                        <span onClick={handleSave}>Salvar</span>
+                        <span onClick={props.new ? handleNew : handleSave}>Salvar</span>&nbsp;&nbsp;
+                    {!props.new &&
+                        <span onClick={handleDelete}>Deletar</span>}
                     </div>
                 </div>
                 }
@@ -401,12 +453,14 @@ function ManageOffers() {
                     {dataF && dataF.map(item => (
                         <>
                         <div>
-                        <Settings type="flight" item={item} />
+                        <Settings key={"SS"+item.slug} type="flight" item={item} />
                         <FlightOffer key={"OD"+item.slug} endpoint={"flights/"+item.slug} {...item}/>
                         </div>
                         </>
                     ))}
                 </div>
+                <h1 class='editHead'>Criar Voo</h1>
+                <Settings key={"OD-new"} type="flight" item={{slugh: "new", departure: "", arrival: "", origin: "", destination: "", airline: "", price: "", left: "", active: true, image: ""}} new={true} />
                 <h1 className='editHead'>Ofertas de estadia</h1>
                 <div className='editOffers' style={{'display' : 'flex', 'flexWrap' : 'wrap'}}>
                     {errorS && <p>{errorS}</p>}
@@ -414,12 +468,14 @@ function ManageOffers() {
                     {dataS && dataS.map(item => (
                         <>
                         <div>
-                        <Settings type="stay" item={item} />
+                        <Settings key={"SS"+item.slug} type="stay" item={item} />
                         <StayOffer key={"OD"+item.slug} endpoint={"stays/"+item.slug} {...item}/>
                         </div>
                         </>
                     ))}
                 </div>
+                <h1 class='editHead'>Criar Estadia</h1>
+                <Settings key={"OD-new"} type="stay" item={{slug: "new", city: "", checkIn: "", checkOut: "", establishment: "", price: "", left: "", active: true, image: ""}} new={true} />
             <Footer/>
         </>
     )

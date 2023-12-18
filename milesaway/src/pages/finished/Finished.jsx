@@ -8,12 +8,10 @@ import { useUser } from '../../contexts/UserContext';
 
 const processCart = async (user, refresh) => {
   try {
-    // Process flights in the cart
     for (const [flightSlug, quantity] of user.cartFlights) {
       const flight = await axios.get(`http://localhost:4001/flights/${flightSlug}`);
 
       if (flight.data) {
-        // Update 'left' property
         const updatedLeft = Math.max(flight.data.left - quantity, 0);
         await axios.put(`http://localhost:4001/flights/${flightSlug}`, { left: updatedLeft });
 
@@ -21,12 +19,10 @@ const processCart = async (user, refresh) => {
       }
     }
 
-    // Process stays in the cart
     for (const [staySlug, quantity] of user.cartStays) {
       const stay = await axios.get(`http://localhost:4001/stays/${staySlug}`);
 
       if (stay.data) {
-        // Update 'left' property
         const updatedLeft = Math.max(stay.data.left - quantity, 0);
         await axios.put(`http://localhost:4001/stays/${staySlug}`, { left: updatedLeft });
 
@@ -34,7 +30,6 @@ const processCart = async (user, refresh) => {
       }
     }
 
-    // Save the updated user with the modified cart
     await axios.put(`http://localhost:4001/accounts/${user.email}/${user.password}`, user);
 
       refresh();

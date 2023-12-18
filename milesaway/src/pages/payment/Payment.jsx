@@ -39,7 +39,6 @@ function Payment() {
     useEffect(() => {
         const fetchDataF = async () => {
             try {
-                // Fetch details for flights in the user's cart
                 const promises = user.cartFlights.map((cartItem) =>
                     axios.get(`http://localhost:4001/flights/${cartItem[0]}`)
                 );
@@ -56,7 +55,6 @@ function Payment() {
 
         const fetchDataS = async () => {
             try {
-                // Fetch details for stays in the user's cart
                 const promises = user.cartStays.map((cartItem) =>
                     axios.get(`http://localhost:4001/stays/${cartItem[0]}`)
                 );
@@ -77,10 +75,8 @@ function Payment() {
 
     useEffect(() => {
         if (dataS.length > 0 || dataF.length > 0) {
-            //console.log(dataF, dataS, user);
             let total = 0;
 
-            // Calculate total for flights
             dataF.forEach((flight, index) => {
                 const cartItem = user.cartFlights[index];
                 if (cartItem && flight && cartItem[1] > 0) {
@@ -88,7 +84,6 @@ function Payment() {
                 }
             });
 
-            // Calculate total for stays
             dataS.forEach((stay, index) => {
                 const cartItem = user.cartStays[index];
                 if (cartItem && cartItem[1] > 0) {
